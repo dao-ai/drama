@@ -48,25 +48,25 @@ export default function ToolsPage() {
           选型不是选最强，是选「在你的镜头组合下返工最少」的那一个。本页按生产环节拆，给相对定位和测试方法，不追榜单。
         </p>
 
-        <div className="note">
-          <span className="label">先说清楚</span>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">先说清楚</span>
           模型能力和价格几乎每季度都在变，具体单价以供应商官网为准。这里给的是<b>选型框架、相对强弱和验证方法</b>，
           拿去做采购决策前，必须用你自己的角色和场景跑一遍样片。
         </div>
 
         <h2 id="rule">三条选型原则</h2>
         <div className="grid grid-3" style={{ margin: "18px 0 26px" }}>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <div className="ico">🎯</div>
             <h3>先定环节，再定模型</h3>
             <p>同一个模型在关键帧和视频上表现完全不同。先明确这一环要解决什么，再比工具。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <div className="ico">🔁</div>
             <h3>看返工率，不看 demo</h3>
             <p>官方 demo 都是精选。真正的成本 = 单价 × (1 + 返工率)。返工率高的便宜模型，往往更贵。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <div className="ico">🧩</div>
             <h3>组合优于单点</h3>
             <p>没有一家通吃。常见做法是「一家出图、一家生视频、一家配音」，用文件交接。</p>
@@ -119,8 +119,8 @@ export default function ToolsPage() {
             </tbody>
           </table>
         </div>
-        <div className="note">
-          <span className="label">用法</span>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">用法</span>
           大纲用长上下文模型，单集台词用中文语感最好的模型，最后人工过一遍「能不能读出口」。别让一个模型干完所有事。
         </div>
 
@@ -231,8 +231,8 @@ export default function ToolsPage() {
             </tbody>
           </table>
         </div>
-        <div className="note red">
-          <span className="label">成本提醒</span>
+        <div className="my-5 rounded-xl border border-flame/30 bg-flame/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#f0cfcd] [&_b]:text-[#ff8a80]">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">成本提醒</span>
           视频按秒计价，返工一次就是双倍。先用 3 段测试镜头验证「人物不崩、时长够剪」，再放量。
         </div>
 
@@ -363,26 +363,26 @@ export default function ToolsPage() {
 
         <h2 id="trap">四个选型陷阱</h2>
         <div className="grid grid-2">
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>① 用榜单代替测试</h3>
             <p>榜单测的是通用审美，不是你的角色。你的女主在 A 模型上可能比榜一更稳。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>② 只看单价不看返工</h3>
             <p>便宜 30% 但返工多一倍，实际成本更高。把返工率写进报价模型再比。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>③ 忽视中文提示词</h3>
             <p>团队用中文写提示词，模型对中文理解差就会多一层翻译损耗和歧义。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>④ 把所有环节押在一家</h3>
             <p>一家涨价或限流，整条线停摆。关键环节至少留一个备选。</p>
           </div>
         </div>
 
-        <div className="note">
-          <span className="label">下一步</span>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">下一步</span>
           选完模型，把单价填进 <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算器</Link>，
           再回 <Link href="/visual" style={{ color: "var(--gold)" }}>视觉开发</Link> 把角色锚点定死。工具只是变量，流程才是常量。
         </div>

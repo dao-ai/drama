@@ -41,8 +41,8 @@ export default function Page() {
         </tbody>
       </table>
     </div>
-    <div className="note">
-      <span className="label">复盘纪律</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">复盘纪律</span>
       一次只改一个变量。同时换封面、换开头、换卡点，你永远不知道是哪个起了作用。
     </div>
   </div>

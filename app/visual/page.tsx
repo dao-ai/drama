@@ -33,17 +33,17 @@ export default function Page() {
 
     <h2 id="three">三层锁定法</h2>
     <div className="grid grid-3" style={{ margin: "18px 0 26px" }}>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div className="ico">🎨</div>
         <h3>第一层：风格前缀</h3>
         <p>所有提示词共用的开头，锁定画风、光线、质感。写死，不改，不即兴发挥。</p>
       </div>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div className="ico">📍</div>
         <h3>第二层：外貌锚点</h3>
         <p>每张图都重复同一段外貌描述，并且带 2–3 个可验证的锚点：痣、疤、戒指、发缝。</p>
       </div>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div className="ico">🔒</div>
         <h3>第三层：参考图 + seed</h3>
         <p>选定一张正面图作为参考，固定 seed。后续所有镜头都从这张图出发，而不是从文字重新开始。</p>
@@ -69,8 +69,8 @@ export default function Page() {
         </tbody>
       </table>
     </div>
-    <div className="note">
-      <span className="label">规则</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">规则</span>
       锚点一旦确定，就写进角色卡，<b>每一条提示词都带上</b>。不要因为这一镜拍不到手就省略——省略一次，模型就会开始自由发挥。
     </div>
 
@@ -82,17 +82,17 @@ export default function Page() {
       <li><strong>全身入画</strong>：从头顶到脚底，不裁切，比例一致。</li>
       <li><strong>服装完整</strong>：纽扣、领口、鞋型都要清楚，后续换装也基于这套结构改。</li>
     </ul>
-    <div className="note">
-      <span className="label">验收</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">验收</span>
       把四张视图并排，看<b>肩宽、头身比、眼距、发际线</b>是否一致。有一项明显漂移，重出，不要凑合。
     </div>
 
     <h2 id="expressions">表情三档：够用就好</h2>
     <p>不需要做表情包全集。三个档位覆盖 80% 的剧情：</p>
     <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
-      <div className="card"><h3>① 常态 / 假笑</h3><p>社交状态。用于铺垫、试探、装乖。眼睛不笑是关键。</p></div>
-      <div className="card"><h3>② 冷脸 / 压迫</h3><p>掌控状态。用于反击、谈判、亮底牌。下巴微抬，眼神直视。</p></div>
-      <div className="card"><h3>③ 破防 / 失控</h3><p>情绪爆点。用于反转之后的后果拍。眼红、忍泪、表情裂开。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 常态 / 假笑</h3><p>社交状态。用于铺垫、试探、装乖。眼睛不笑是关键。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 冷脸 / 压迫</h3><p>掌控状态。用于反击、谈判、亮底牌。下巴微抬，眼神直视。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 破防 / 失控</h3><p>情绪爆点。用于反转之后的后果拍。眼红、忍泪、表情裂开。</p></div>
     </div>
     <p>每档出一张半身参考，深灰背景、柔光。后面所有镜头从这三张里选最接近的做参考图，比每次文字描述稳得多。</p>
 
@@ -111,8 +111,8 @@ export default function Page() {
       <li><strong>死寂版</strong>：加 <code>guests frozen in shock, desaturated color, harsh blue LED screen light</code></li>
       <li><strong>夜晚版</strong>：把主光换成 <code>cold blue moonlight through tall windows, single spotlight on stage</code></li>
     </ul>
-    <div className="note">
-      <span className="label">省钱技巧</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">省钱技巧</span>
       大屏内容（转账记录、学历查询页、直播界面、录音波形）<b>全部做平面设计图</b>，不做生成。它们是信息载体，不是美术资产，做平面又快又准。
     </div>
 

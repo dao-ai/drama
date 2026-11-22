@@ -109,15 +109,6 @@ section{padding:64px 0}
 .grid-2{grid-template-columns:repeat(2,1fr)}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-4{grid-template-columns:repeat(4,1fr)}
-.card{
-  background:linear-gradient(160deg,var(--panel),#101017);
-  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
-  transition:.2s;position:relative;
-}
-.card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
-.card h3{margin:10px 0 8px;font-size:17px}
-.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
-.card .ico{font-size:22px}
 /* pipeline strip */
 .pipe{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:8px}
 .pipe .p{
@@ -152,14 +143,7 @@ section{padding:64px 0}
 }
 
 /* callout */
-.note{
-  border:1px solid rgba(217,164,65,.28);background:var(--gold-soft);
-  border-radius:12px;padding:16px 18px;margin:20px 0;font-size:14.5px;color:#e8dcc4;
-}
-.note b{color:var(--gold)}
-.note.red{border-color:rgba(224,67,63,.3);background:var(--red-soft);color:#f0cfcd}
-.note.red b{color:#ff8a80}
-.note .label{display:block;font-size:11px;letter-spacing:.16em;font-weight:700;margin-bottom:4px;opacity:.8}
+
 
 /* table */
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin:18px 0 24px}

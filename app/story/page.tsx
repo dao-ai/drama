@@ -34,16 +34,16 @@ export default function Page() {
       <li><strong>25–45 镜</strong>：单集镜头数。平均 3–5 秒一镜，低于 25 镜会显得拖，高于 45 镜预算会炸。</li>
       <li><strong>每 15–20 秒</strong>：必须有一次信息增量。没有新信息，观众的手指就会动。</li>
     </ul>
-    <div className="note">
-      <span className="label">写之前先问</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">写之前先问</span>
       这一集，观众<b>必须知道</b>的三件事是什么？如果超过三件，拆集；如果少于一件，这集可以删。
     </div>
 
     <h2 id="layers">三层结构：全剧、单元、单集</h2>
     <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
-      <div className="card"><h3>全剧</h3><p>一条主线悬念贯穿到底（旧案、身世、复仇目标）。每 10 集给一次大反转，每 20 集换一次赌注。</p></div>
-      <div className="card"><h3>单元（3 集）</h3><p>三集一个完整循环：起（新麻烦）→ 承（升级）→ 转（打脸/反转）。第 3 集结尾抛下一个循环的引子。</p></div>
-      <div className="card"><h3>单集</h3><p>六拍结构，自成一个情绪闭环，但结尾必须留扣。单集可以独立被刷到，所以开头不能依赖上一集。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>全剧</h3><p>一条主线悬念贯穿到底（旧案、身世、复仇目标）。每 10 集给一次大反转，每 20 集换一次赌注。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>单元（3 集）</h3><p>三集一个完整循环：起（新麻烦）→ 承（升级）→ 转（打脸/反转）。第 3 集结尾抛下一个循环的引子。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>单集</h3><p>六拍结构，自成一个情绪闭环，但结尾必须留扣。单集可以独立被刷到，所以开头不能依赖上一集。</p></div>
     </div>
     <p>很多剧死在「只有单集没有单元」：每集都在吵，但三集过去什么也没推进。检验方法——<strong>把第 3 集的结尾和第 1 集的开头对比，世界有没有变化？</strong></p>
 
@@ -80,22 +80,22 @@ export default function Page() {
         </tbody>
       </table>
     </div>
-    <div className="note red">
-      <span className="label">样片实例</span>
+    <div className="my-5 rounded-xl border border-flame/30 bg-flame/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#f0cfcd] [&_b]:text-[#ff8a80]">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">样片实例</span>
       《退婚夜》：E1 婚礼抢麦爆料 → 未婚夫反手递 U 盘 → 反派启动 B 计划；E2 全网网暴、直播间被封，备用号反杀；E3 鸿门宴逼交证据，协议结婚换弟弟安全。三集各自闭环，又共同推进主线。
     </div>
 
     <h2 id="hooks">钩子类型清单</h2>
     <p>结尾扣不要每次都一样。下面八种轮着用，观众才不会疲劳：</p>
     <div className="grid grid-2" style={{ margin: "16px 0 24px" }}>
-      <div className="card"><h3>① 新威胁</h3><p>「那就让她，跟她爸妈一样。」——反派升级手段，直接指向下一集的危险。</p></div>
-      <div className="card"><h3>② 新身份</h3><p>主角亮出隐藏身份或新账号，观众想看这个身份怎么用。</p></div>
-      <div className="card"><h3>③ 新证据</h3><p>U 盘、录音、档案袋。物件本身要能被画面拍到，别只靠台词说。</p></div>
-      <div className="card"><h3>④ 关系反转</h3><p>盟友其实是利用，敌人其实是保护。一句台词就能翻盘。</p></div>
-      <div className="card"><h3>⑤ 倒计时</h3><p>「三天后开庭」「今晚十二点前」。给下一集一个硬期限。</p></div>
-      <div className="card"><h3>⑥ 误认/错位</h3><p>观众知道而角色不知道，制造「你倒是回头看看」的焦躁。</p></div>
-      <div className="card"><h3>⑦ 代价显形</h3><p>赢了这一局，但弟弟/朋友/证据出事了。爽完立刻给痛。</p></div>
-      <div className="card"><h3>⑧ 冷句收尾</h3><p>不说话，一个眼神或一个动作，配乐戛然而止。最省成本，也最吃演技。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 新威胁</h3><p>「那就让她，跟她爸妈一样。」——反派升级手段，直接指向下一集的危险。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 新身份</h3><p>主角亮出隐藏身份或新账号，观众想看这个身份怎么用。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 新证据</h3><p>U 盘、录音、档案袋。物件本身要能被画面拍到，别只靠台词说。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>④ 关系反转</h3><p>盟友其实是利用，敌人其实是保护。一句台词就能翻盘。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>⑤ 倒计时</h3><p>「三天后开庭」「今晚十二点前」。给下一集一个硬期限。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>⑥ 误认/错位</h3><p>观众知道而角色不知道，制造「你倒是回头看看」的焦躁。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>⑦ 代价显形</h3><p>赢了这一局，但弟弟/朋友/证据出事了。爽完立刻给痛。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>⑧ 冷句收尾</h3><p>不说话，一个眼神或一个动作，配乐戛然而止。最省成本，也最吃演技。</p></div>
     </div>
 
     <h2 id="dialogue">台词四条规则</h2>
@@ -132,10 +132,10 @@ export default function Page() {
 
     <h2 id="traps">四种废稿模式</h2>
     <div className="grid grid-2">
-      <div className="card"><h3>① 前情提要式开场</h3><p>用 20 秒交代「她本是豪门千金」。观众不是来看说明书的，直接把她扔进冲突里。</p></div>
-      <div className="card"><h3>② 情绪没有出口</h3><p>主角一直受气，到结尾还没还手。爽剧可以延迟满足，但不能整集都是憋屈。</p></div>
-      <div className="card"><h3>③ 反派降智</h3><p>为了让主角赢，反派突然犯低级错误。反派的每一步都该有合理动机，主角赢在信息差，不是对手蠢。</p></div>
-      <div className="card"><h3>④ 结尾扣是空话</h3><p>「接下来，会发生什么呢？」——这不是钩子，是偷懒。要给出具体的人、事、物。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 前情提要式开场</h3><p>用 20 秒交代「她本是豪门千金」。观众不是来看说明书的，直接把她扔进冲突里。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 情绪没有出口</h3><p>主角一直受气，到结尾还没还手。爽剧可以延迟满足，但不能整集都是憋屈。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 反派降智</h3><p>为了让主角赢，反派突然犯低级错误。反派的每一步都该有合理动机，主角赢在信息差，不是对手蠢。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>④ 结尾扣是空话</h3><p>「接下来，会发生什么呢？」——这不是钩子，是偷懒。要给出具体的人、事、物。</p></div>
     </div>
   </div>
 </div>

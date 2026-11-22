@@ -45,24 +45,24 @@ export default function Page() {
     <h2 id="level">A/B/C 镜头分级</h2>
     <p>全部生成视频，成本会翻三倍；全部用静帧，观众会觉得是 PPT。正确的做法是分级。</p>
     <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="pill red">A 级</span></div>
         <h3>必须视频</h3>
         <p>情绪转折、关键动作、群像场面。3–6 秒，全剧不超过总镜数的 30%。</p>
       </div>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="pill gold">B 级</span></div>
         <h3>关键帧 + 2D 动效</h3>
         <p>对话、反应、氛围。推拉、呼吸、视差就能撑住，是性价比最高的档位。</p>
       </div>
-      <div className="card">
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="pill">C 级</span></div>
         <h3>平面 / 字幕卡</h3>
         <p>大屏、转账记录、聊天界面、时间地点卡。直接做平面设计，不生成。</p>
       </div>
     </div>
-    <div className="note">
-      <span className="label">判断口诀</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">判断口诀</span>
       这一镜里<b>有没有人物动作或表情变化</b>？有 → A；只有镜头运动 → B；只有信息 → C。
     </div>
 
@@ -108,8 +108,8 @@ export default function Page() {
       <li><strong>选镜生视频</strong>：只给 A 级镜头做图生视频，单段 3–6 秒，宁短勿长。</li>
       <li><strong>返工队列</strong>：不合格的单独排队重出，不混进正片，避免后面剪辑时才发现。</li>
     </ol>
-    <div className="note red">
-      <span className="label">顺序错了会怎样</span>
+    <div className="my-5 rounded-xl border border-flame/30 bg-flame/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#f0cfcd] [&_b]:text-[#ff8a80]">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">顺序错了会怎样</span>
       先批量出图再锁角色 → 前面几十张全废；先做视频再改分镜 → 视频白生成。生成是不可逆的支出，<b>所有决定都要在按下生成之前做完</b>。
     </div>
 

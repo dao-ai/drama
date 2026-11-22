@@ -132,7 +132,7 @@ export default function Page() {
 
         <div className="mt-[26px] grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stages.map((s) => (
-            <Link className="card rv group relative" href={s.href} key={s.no}>
+            <Link className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px] rv group relative" href={s.href} key={s.no}>
               <span className="absolute right-[18px] top-4 text-xs font-extrabold tracking-widest text-dim transition group-hover:text-flame">
                 {s.no}
               </span>
@@ -150,7 +150,7 @@ export default function Page() {
         </SectionHead>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {principles.map((p) => (
-            <div className="card rv" key={p.title}>
+            <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px] rv" key={p.title}>
               <div className="ico">{p.icon}</div>
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
@@ -177,8 +177,8 @@ export default function Page() {
           </table>
         </div>
 
-        <div className="note rv">
-          <span className="label">为什么这集能当模板</span>
+        <div className="rv my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">为什么这集能当模板</span>
           <b>强冲突开场 + 当代马甲（爆料号）+ 长线悬念（父母旧案）</b>。三种钩子叠在一集里，任何一类观众都能被抓住一个。但它仍然只用 4 个场景——爽点靠结构，不靠烧钱。
         </div>
       </section>

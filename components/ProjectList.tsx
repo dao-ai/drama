@@ -78,8 +78,8 @@ export default function ProjectList({
 
   if (projects.length === 0) {
     return (
-      <div className="note">
-        <span className="label">还没有报价</span>
+      <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+        <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">还没有报价</span>
         去 <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>分镜页的成本计算器</Link>{" "}
         调好参数，点「生成报价单」，在报价页点「保存到报价库」。
       </div>

@@ -134,8 +134,8 @@ export default function Page() {
         </tbody>
       </table>
     </div>
-    <div className="note">
-      <span className="label">算账顺序</span>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">算账顺序</span>
       先算<b>单集生成成本</b>（见 <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算器</Link>），乘以集数，再加上音频、剪辑、投流。如果总数超过预算，优先砍 A 级镜头比例和集数，<b>不要砍角色一致性</b>。
     </div>
   </div>

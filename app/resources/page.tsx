@@ -165,8 +165,8 @@ export default function ResourcesPage() {
           <li><b>然后验收</b>：用 <Link href="/tools" style={{ color: "var(--gold)" }}>三镜测试</Link> 和 <Link href="/checklist" style={{ color: "var(--gold)" }}>上线清单</Link> 检查，找出卡点。</li>
           <li><b>最后算账</b>：把单价填进 <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算器</Link>，再决定要不要批量。</li>
         </ol>
-        <div className="note">
-          <span className="label">提醒</span>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">提醒</span>
           教程里的「一键成片」通常只适合验证，不适合量产。真做 80 集，卡人的不是生成，是<b>一致性、返工和排期</b>。
         </div>
 
@@ -184,19 +184,19 @@ export default function ResourcesPage() {
 
         <h2 id="filter">四条筛选手册</h2>
         <div className="grid grid-2">
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>① 看有没有验收标准</h3>
             <p>只说「这样效果更好」的是经验；说「过不了就退回哪一步」的才是流程。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>② 看有没有成本口径</h3>
             <p>不提单价、返工率、单集成本的教程，学完也不知道能不能量产。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>③ 看发布日期</h3>
             <p>AI 工具三个月一代。2024 年的工作流放到 2026 年，参数基本要重调。</p>
           </div>
-          <div className="card">
+          <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>④ 看有没有带货</h3>
             <p>不是不能看，是要把「工具推荐」和「方法」分开，方法可以学，工具自己比价。</p>
           </div>
@@ -209,8 +209,8 @@ export default function ResourcesPage() {
           <Link href="/visual" style={{ color: "var(--gold)" }}>角色锁定</Link>、
           <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算</Link>。
         </p>
-        <div className="note">
-          <span className="label">建议</span>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">建议</span>
           别收藏一堆教程。选一条主线，做出 1 分钟样片，再回来对清单——这比看完 37 集更有用。
         </div>
       </div>
