@@ -82,8 +82,6 @@ export default function ClientFX() {
         } else fallback(text, done);
       }
 
-      const head = target.closest(".stage > .h") as HTMLElement | null;
-      if (head) head.parentElement?.classList.toggle("open");
     };
     document.addEventListener("click", onClick);
 
