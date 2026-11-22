@@ -33,7 +33,7 @@ export default function ClientFX() {
     rvs.forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
 
     const tocLinks = Array.from(
-      document.querySelectorAll<HTMLAnchorElement>(".toc a[href^='#']")
+      document.querySelectorAll<HTMLAnchorElement>("[data-toc] a[href^='#']")
     );
     let io2: IntersectionObserver | null = null;
     if (tocLinks.length && typeof IntersectionObserver !== "undefined") {

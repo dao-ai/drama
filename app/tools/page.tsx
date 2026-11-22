@@ -28,18 +28,18 @@ function Cost({ level }: { level: "low" | "mid" | "high" }) {
 
 export default function ToolsPage() {
   return (
-    <div className="wrap doc">
-      <aside className="toc">
-        <div className="t">本页目录</div>
-        <a href="#rule">三条选型原则</a>
-        <a href="#text">文本 / 剧本</a>
-        <a href="#image">图像 / 关键帧</a>
-        <a href="#video">视频 / 动效</a>
-        <a href="#voice">语音 / 配音</a>
-        <a href="#combo">三档组合</a>
-        <a href="#test">三镜测试法</a>
-        <a href="#buy">采购检查表</a>
-        <a href="#trap">四个选型陷阱</a>
+    <div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+      <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+        <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+        <a href="#rule" className="block py-1.5 text-muted transition hover:text-mist ">三条选型原则</a>
+        <a href="#text" className="block py-1.5 text-muted transition hover:text-mist ">文本 / 剧本</a>
+        <a href="#image" className="block py-1.5 text-muted transition hover:text-mist ">图像 / 关键帧</a>
+        <a href="#video" className="block py-1.5 text-muted transition hover:text-mist ">视频 / 动效</a>
+        <a href="#voice" className="block py-1.5 text-muted transition hover:text-mist ">语音 / 配音</a>
+        <a href="#combo" className="block py-1.5 text-muted transition hover:text-mist ">三档组合</a>
+        <a href="#test" className="block py-1.5 text-muted transition hover:text-mist ">三镜测试法</a>
+        <a href="#buy" className="block py-1.5 text-muted transition hover:text-mist ">采购检查表</a>
+        <a href="#trap" className="block py-1.5 text-muted transition hover:text-mist ">四个选型陷阱</a>
       </aside>
 
       <div className="doc-main">

@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-<div className="wrap doc">
-  <aside className="toc">
-    <div className="t">本页目录</div>
-    <a href="#unit">单集是基本单位</a>
-    <a href="#layers">三层结构</a>
-    <a href="#sixbeats">单集六拍</a>
-    <a href="#beatcalc">节拍时间码生成器</a>
-    <a href="#first3">前三集法则</a>
-    <a href="#hooks">钩子类型清单</a>
-    <a href="#dialogue">台词四条规则</a>
-    <a href="#check">信息点检查表</a>
-    <a href="#traps">四种废稿模式</a>
+<div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+  <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+    <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+    <a href="#unit" className="block py-1.5 text-muted transition hover:text-mist ">单集是基本单位</a>
+    <a href="#layers" className="block py-1.5 text-muted transition hover:text-mist ">三层结构</a>
+    <a href="#sixbeats" className="block py-1.5 text-muted transition hover:text-mist ">单集六拍</a>
+    <a href="#beatcalc" className="block py-1.5 text-muted transition hover:text-mist ">节拍时间码生成器</a>
+    <a href="#first3" className="block py-1.5 text-muted transition hover:text-mist ">前三集法则</a>
+    <a href="#hooks" className="block py-1.5 text-muted transition hover:text-mist ">钩子类型清单</a>
+    <a href="#dialogue" className="block py-1.5 text-muted transition hover:text-mist ">台词四条规则</a>
+    <a href="#check" className="block py-1.5 text-muted transition hover:text-mist ">信息点检查表</a>
+    <a href="#traps" className="block py-1.5 text-muted transition hover:text-mist ">四种废稿模式</a>
   </aside>
 
   <div className="doc-main">

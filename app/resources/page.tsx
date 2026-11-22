@@ -137,16 +137,16 @@ function Group({ title, kicker, items }: { title: string; kicker: string; items:
 
 export default function ResourcesPage() {
   return (
-    <div className="wrap doc">
-      <aside className="toc">
-        <div className="t">本页目录</div>
-        <a href="#how">怎么用这份清单</a>
-        <a href="#cn-text">中文 · 全流程图文</a>
-        <a href="#cn-video">中文 · 视频</a>
-        <a href="#official">官方工具</a>
-        <a href="#overseas">海外课程与社区</a>
-        <a href="#filter">四条筛选手册</a>
-        <a href="#gap">还缺什么</a>
+    <div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+      <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+        <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+        <a href="#how" className="block py-1.5 text-muted transition hover:text-mist ">怎么用这份清单</a>
+        <a href="#cn-text" className="block py-1.5 text-muted transition hover:text-mist ">中文 · 全流程图文</a>
+        <a href="#cn-video" className="block py-1.5 text-muted transition hover:text-mist ">中文 · 视频</a>
+        <a href="#official" className="block py-1.5 text-muted transition hover:text-mist ">官方工具</a>
+        <a href="#overseas" className="block py-1.5 text-muted transition hover:text-mist ">海外课程与社区</a>
+        <a href="#filter" className="block py-1.5 text-muted transition hover:text-mist ">四条筛选手册</a>
+        <a href="#gap" className="block py-1.5 text-muted transition hover:text-mist ">还缺什么</a>
       </aside>
 
       <div className="doc-main">

@@ -8,17 +8,17 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-<div className="wrap doc">
-  <aside className="toc">
-    <div className="t">本页目录</div>
-    <a href="#sheet">分镜表字段</a>
-    <a href="#level">A/B/C 镜头分级</a>
-    <a href="#motion">动效菜单</a>
-    <a href="#example">分镜示例</a>
-    <a href="#gen">生成顺序</a>
-    <a href="#record">生成记录与返工</a>
-    <a href="#calc">单集成本计算器</a>
-    <a href="#fps">导出规格</a>
+<div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+  <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+    <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+    <a href="#sheet" className="block py-1.5 text-muted transition hover:text-mist ">分镜表字段</a>
+    <a href="#level" className="block py-1.5 text-muted transition hover:text-mist ">A/B/C 镜头分级</a>
+    <a href="#motion" className="block py-1.5 text-muted transition hover:text-mist ">动效菜单</a>
+    <a href="#example" className="block py-1.5 text-muted transition hover:text-mist ">分镜示例</a>
+    <a href="#gen" className="block py-1.5 text-muted transition hover:text-mist ">生成顺序</a>
+    <a href="#record" className="block py-1.5 text-muted transition hover:text-mist ">生成记录与返工</a>
+    <a href="#calc" className="block py-1.5 text-muted transition hover:text-mist ">单集成本计算器</a>
+    <a href="#fps" className="block py-1.5 text-muted transition hover:text-mist ">导出规格</a>
   </aside>
 
   <div className="doc-main">

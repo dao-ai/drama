@@ -8,17 +8,17 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-<div className="wrap doc">
-  <aside className="toc">
-    <div className="t">本页目录</div>
-    <a href="#progress">完成进度</a>
-    <a href="#g-script">剧本</a>
-    <a href="#g-visual">视觉开发</a>
-    <a href="#g-shot">分镜与生成</a>
-    <a href="#g-audio">音频</a>
-    <a href="#g-edit">剪辑包装</a>
-    <a href="#g-launch">上线与复盘</a>
-    <a href="#metrics" className="sub">指标口径</a>
+<div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+  <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+    <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+    <a href="#progress" className="block py-1.5 text-muted transition hover:text-mist ">完成进度</a>
+    <a href="#g-script" className="block py-1.5 text-muted transition hover:text-mist ">剧本</a>
+    <a href="#g-visual" className="block py-1.5 text-muted transition hover:text-mist ">视觉开发</a>
+    <a href="#g-shot" className="block py-1.5 text-muted transition hover:text-mist ">分镜与生成</a>
+    <a href="#g-audio" className="block py-1.5 text-muted transition hover:text-mist ">音频</a>
+    <a href="#g-edit" className="block py-1.5 text-muted transition hover:text-mist ">剪辑包装</a>
+    <a href="#g-launch" className="block py-1.5 text-muted transition hover:text-mist ">上线与复盘</a>
+    <a href="#metrics" className="block py-1.5 text-muted transition hover:text-mist pl-3 text-[12.5px] text-dim">指标口径</a>
   </aside>
 
   <div className="doc-main">

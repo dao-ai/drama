@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-<div className="wrap doc">
-  <aside className="toc">
-    <div className="t">本页目录</div>
-    <a href="#handoff">阶段交接物</a>
-    <a href="#s0">S0 立项</a>
-    <a href="#s1">S1 剧本</a>
-    <a href="#s2">S2 视觉开发</a>
-    <a href="#s3">S3 分镜</a>
-    <a href="#s4">S4 生成</a>
-    <a href="#s5">S5 音频</a>
-    <a href="#s6">S6 剪辑包装</a>
-    <a href="#s7">S7 分发复盘</a>
-    <a href="#ratio" className="sub">成本结构</a>
+<div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+  <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+    <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+    <a href="#handoff" className="block py-1.5 text-muted transition hover:text-mist ">阶段交接物</a>
+    <a href="#s0" className="block py-1.5 text-muted transition hover:text-mist ">S0 立项</a>
+    <a href="#s1" className="block py-1.5 text-muted transition hover:text-mist ">S1 剧本</a>
+    <a href="#s2" className="block py-1.5 text-muted transition hover:text-mist ">S2 视觉开发</a>
+    <a href="#s3" className="block py-1.5 text-muted transition hover:text-mist ">S3 分镜</a>
+    <a href="#s4" className="block py-1.5 text-muted transition hover:text-mist ">S4 生成</a>
+    <a href="#s5" className="block py-1.5 text-muted transition hover:text-mist ">S5 音频</a>
+    <a href="#s6" className="block py-1.5 text-muted transition hover:text-mist ">S6 剪辑包装</a>
+    <a href="#s7" className="block py-1.5 text-muted transition hover:text-mist ">S7 分发复盘</a>
+    <a href="#ratio" className="block py-1.5 text-muted transition hover:text-mist pl-3 text-[12.5px] text-dim">成本结构</a>
   </aside>
 
   <div className="doc-main">

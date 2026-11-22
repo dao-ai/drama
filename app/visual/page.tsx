@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-<div className="wrap doc">
-  <aside className="toc">
-    <div className="t">本页目录</div>
-    <a href="#problem">一致性为什么难</a>
-    <a href="#three">三层锁定法</a>
-    <a href="#anchor">锚点设计</a>
-    <a href="#turnaround">三视图规范</a>
-    <a href="#expressions">表情三档</a>
-    <a href="#promptgen">提示词生成器</a>
-    <a href="#scene">场景底板</a>
-    <a href="#negative">负向提示词</a>
-    <a href="#fail">六种典型翻车</a>
+<div className="mx-auto grid max-w-[1160px] gap-12 px-4 py-12 pb-20 sm:px-6 lg:grid-cols-[220px_1fr] lg:items-start">
+  <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
+    <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
+    <a href="#problem" className="block py-1.5 text-muted transition hover:text-mist ">一致性为什么难</a>
+    <a href="#three" className="block py-1.5 text-muted transition hover:text-mist ">三层锁定法</a>
+    <a href="#anchor" className="block py-1.5 text-muted transition hover:text-mist ">锚点设计</a>
+    <a href="#turnaround" className="block py-1.5 text-muted transition hover:text-mist ">三视图规范</a>
+    <a href="#expressions" className="block py-1.5 text-muted transition hover:text-mist ">表情三档</a>
+    <a href="#promptgen" className="block py-1.5 text-muted transition hover:text-mist ">提示词生成器</a>
+    <a href="#scene" className="block py-1.5 text-muted transition hover:text-mist ">场景底板</a>
+    <a href="#negative" className="block py-1.5 text-muted transition hover:text-mist ">负向提示词</a>
+    <a href="#fail" className="block py-1.5 text-muted transition hover:text-mist ">六种典型翻车</a>
   </aside>
 
   <div className="doc-main">
