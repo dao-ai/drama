@@ -1,0 +1,51 @@
+import type { Metadata } from "next";
+import Checklist from "@/components/tools/Checklist";
+
+export const metadata: Metadata = {
+  title: "上线检查表",
+  description: "竖屏漫剧从剧本到上线的逐项检查表，勾选状态自动保存在本地。",
+};
+
+export default function Page() {
+  return (
+<div className="wrap doc">
+  <aside className="toc">
+    <div className="t">本页目录</div>
+    <a href="#progress">完成进度</a>
+    <a href="#g-script">剧本</a>
+    <a href="#g-visual">视觉开发</a>
+    <a href="#g-shot">分镜与生成</a>
+    <a href="#g-audio">音频</a>
+    <a href="#g-edit">剪辑包装</a>
+    <a href="#g-launch">上线与复盘</a>
+    <a href="#metrics" className="sub">指标口径</a>
+  </aside>
+
+  <div className="doc-main">
+    <h1>上线检查表</h1>
+    <p className="sub">发布前逐项过。勾选状态保存在本机浏览器，换设备不同步。任何一项没过，都不要点发布——补一集比删一条差评便宜。</p>
+
+    <h2 id="progress">完成进度</h2>
+<Checklist />
+
+<h2 id="metrics">指标口径</h2>
+    <div className="tablewrap">
+      <table>
+        <thead><tr><th>指标</th><th>定义</th><th>看什么</th></tr></thead>
+        <tbody>
+          <tr><td>3s 完播率</td><td>看完前 3 秒的比例</td><td>钩子是否成立，低于 60% 先改开头</td></tr>
+          <tr><td>完播率</td><td>看完单集的比例</td><td>节奏与信息密度</td></tr>
+          <tr><td>追更率</td><td>看完后点开下一集的比例</td><td>结尾扣是否够硬</td></tr>
+          <tr><td>付费转化</td><td>卡点集的付费人数 / 触达人数</td><td>卡点位置与情绪峰值是否对齐</td></tr>
+          <tr><td>ROI</td><td>流水 / 投流花费</td><td>决定是否放量</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="note">
+      <span className="label">复盘纪律</span>
+      一次只改一个变量。同时换封面、换开头、换卡点，你永远不知道是哪个起了作用。
+    </div>
+  </div>
+</div>
+  );
+}
