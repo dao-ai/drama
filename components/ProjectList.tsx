@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { toQuery, yuan, yuanWan, type EstimateInput } from "@/lib/estimate";
+import { yuan, yuanWan, type EstimateInput } from "@/lib/estimate";
+import QuoteModal from "@/components/QuoteModal";
 
 export type ProjectView = {
   id: string;
@@ -52,6 +53,7 @@ export default function ProjectList({
   onDelete: (id: string) => void;
 }) {
   const [picked, setPicked] = useState<string[]>([]);
+  const [preview, setPreview] = useState<ProjectView | null>(null);
 
   const selected = useMemo(
     () =>
@@ -129,12 +131,12 @@ export default function ProjectList({
                   {yuanWan(p.total)}
                 </td>
                 <td style={{ whiteSpace: "nowrap", textAlign: "right" }}>
-                  <Link
-                    href={"/quote?" + toQuery(p.input)}
-                    style={{ color: "var(--gold)", fontSize: 13, marginRight: 12 }}
+                  <button
+                    onClick={() => setPreview(p)}
+                    className="mr-3 text-[13px] text-gold transition hover:text-[#ffd98a]"
                   >
                     打开
-                  </Link>
+                  </button>
                   <button onClick={() => remove(p.id)} className="text-[13px] text-dim underline underline-offset-[3px] transition hover:text-[#ff8a80] disabled:opacity-50">
                     删除
                   </button>
@@ -197,6 +199,10 @@ export default function ProjectList({
             </tbody>
           </table>
         </div>
+      )}
+
+      {preview && (
+        <QuoteModal input={preview.input} onClose={() => setPreview(null)} />
       )}
     </>
   );
