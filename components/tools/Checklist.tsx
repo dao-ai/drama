@@ -106,33 +106,32 @@ export default function Checklist() {
     } catch {}
   }, [done, loaded]);
 
-  const total = useMemo(
-    () => GROUPS.reduce((n, g) => n + g.items.length, 0),
-    []
-  );
+  const total = useMemo(() => GROUPS.reduce((n, g) => n + g.items.length, 0), []);
   const count = useMemo(
-    () => GROUPS.reduce(
-      (n, g) => n + g.items.filter((_, i) => done[g.key + "-" + i]).length,
-      0
-    ),
+    () =>
+      GROUPS.reduce(
+        (n, g) => n + g.items.filter((_, i) => done[g.key + "-" + i]).length,
+        0
+      ),
     [done]
   );
 
-  const toggle = (k: string) =>
-    setDone((prev) => ({ ...prev, [k]: !prev[k] }));
+  const toggle = (k: string) => setDone((prev) => ({ ...prev, [k]: !prev[k] }));
 
   return (
     <>
-      <div className="total-bar">
-        <div className="track">
-          <i style={{ width: (count / total) * 100 + "%" }} />
+      <div className="mb-6 mt-1 flex items-center gap-4">
+        <div className="h-2 flex-1 overflow-hidden rounded-md bg-white/[0.07]">
+          <i
+            className="block h-full rounded-md bg-gradient-to-r from-flame to-gold transition-[width] duration-300"
+            style={{ width: (count / total) * 100 + "%" }}
+          />
         </div>
-        <b>
+        <b className="whitespace-nowrap text-sm tabular-nums text-gold">
           {count} / {total} 项完成
         </b>
         <button
-          className="btn btn-ghost"
-          style={{ padding: "7px 14px", fontSize: 13 }}
+          className="rounded-lg border border-white/15 px-3.5 py-1.5 text-[13px] text-mist transition hover:bg-white/5"
           onClick={() => setDone({})}
         >
           重置
@@ -142,28 +141,36 @@ export default function Checklist() {
       {GROUPS.map((g) => {
         const c = g.items.filter((_, i) => done[g.key + "-" + i]).length;
         return (
-          <section key={g.key} style={{ padding: 0 }}>
+          <section key={g.key} className="p-0">
             <h2 id={"g-" + g.key}>{g.title}</h2>
-            <div className="check-group">
-              <div className="cg-h">
+            <div className="mb-4 overflow-hidden rounded-2xl border border-line bg-panel">
+              <div className="flex items-center gap-2.5 bg-white/[0.03] px-5 py-3.5 text-[15px] font-bold">
                 <span>{g.icon}</span>
                 {g.title}
-                <span className="count">
+                <span className="ml-auto text-xs tabular-nums text-muted">
                   {c}/{g.items.length}
                 </span>
               </div>
-              <div className="checklist">
+              <div className="px-2.5 pb-3 pt-2">
                 {g.items.map((t, i) => {
                   const k = g.key + "-" + i;
                   return (
-                    <label className="check" key={k}>
+                    <label
+                      className="flex cursor-pointer items-start gap-[11px] rounded-lg px-2.5 py-2.5 text-[14.5px] text-[#c6c2cd] transition hover:bg-white/[0.035]"
+                      key={k}
+                    >
                       <input
                         type="checkbox"
+                        className="peer sr-only"
                         checked={!!done[k]}
                         onChange={() => toggle(k)}
                       />
-                      <span className="box">✓</span>
-                      <span className="txt">{t}</span>
+                      <span className="mt-1 grid h-[18px] w-[18px] shrink-0 place-items-center rounded-[5px] border-[1.5px] border-white/25 text-[11px] text-transparent transition peer-checked:border-flame peer-checked:bg-flame peer-checked:text-white">
+                        ✓
+                      </span>
+                      <span className="leading-relaxed peer-checked:text-dim peer-checked:line-through">
+                        {t}
+                      </span>
                     </label>
                   );
                 })}
