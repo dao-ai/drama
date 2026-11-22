@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import { parseInput } from "@/lib/estimate";
+import QuoteModal from "@/components/QuoteModal";
 
 type Field = {
   key: string;
@@ -37,6 +38,7 @@ export default function CostCalculator() {
     Object.fromEntries(initial.map((f) => [f.key, f.value]))
   );
   const [project, setProject] = useState("《退婚夜，我直播爆了豪门黑料》");
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   // 从报价单“调整参数”回来时回填
   useEffect(() => {
@@ -187,16 +189,20 @@ export default function CostCalculator() {
           flexWrap: "wrap",
         }}
       >
-        <Link
+        <button
           className="inline-flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-br from-[#e8544f] to-[#c3332f] px-[22px] py-3 text-[15px] font-semibold text-white shadow-[0_10px_26px_rgba(224,67,63,0.28)] transition hover:-translate-y-px hover:shadow-[0_14px_32px_rgba(224,67,63,0.36)]"
-          href={
-            "/quote?" +
-            new URLSearchParams({ ...values, project }).toString()
-          }
+          onClick={() => setQuoteOpen(true)}
         >
           生成报价单 →
-        </Link>
+        </button>
       </div>
+
+      {quoteOpen && (
+        <QuoteModal
+          input={parseInput({ ...values, project })}
+          onClose={() => setQuoteOpen(false)}
+        />
+      )}
     </div>
   );
 }
