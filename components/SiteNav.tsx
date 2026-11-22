@@ -10,6 +10,7 @@ const items = [
   { href: "/visual", label: "视觉 / 提示词" },
   { href: "/storyboard", label: "分镜 / 成本" },
   { href: "/tools", label: "工具选型" },
+  { href: "/resources", label: "学习资源" },
   { href: "/projects", label: "报价库" },
   { href: "/checklist", label: "上线清单" },
 ];
