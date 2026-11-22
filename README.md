@@ -51,6 +51,13 @@ npm run preview   # 用静态服务器跑 out/，4180
 - Tailwind CSS v4（PostCSS 插件），设计 token 定义在 `app/globals.css` 的 `@theme` 里
 - 首页、导航、页脚、学习资源卡片已全部使用 utility class；长文排版、表格、工具面板等剩余样式收在 `@layer components`，按页逐步迁
 
+## 样式守则
+
+- 视觉样式一律用 Tailwind utility；`app/globals.css` 只保留 token、base、容器、`.doc-main` 排版、手机 mock、打印
+- 新增自定义组件类会被 `scripts/check-css.mjs` 拦下（白名单在脚本顶部）
+- `npm run build` 前会自动跑 `prebuild` 校验；本地可单独跑 `npm run lint:css`
+- 确需新增组件类：先改 ALLOWED 并写明原因，再提交
+
 ## 结构
 
 - `app/*/page.tsx` 路由页面

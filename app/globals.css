@@ -15,155 +15,220 @@
   --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, -apple-system, sans-serif;
 }
 
+/* 只保留：基础样式、容器、长文排版、手机 mock、滚动浮现、打印。
+   其余视觉一律用 Tailwind utility；新增组件类会被 scripts/check-css.mjs 拦下。 */
+
+@layer base {
+  :root {
+    --bg: #0a0a0e;
+    --bg-soft: #0f0f15;
+    --panel: #14141c;
+    --line: rgba(255, 255, 255, 0.09);
+    --line-strong: rgba(255, 255, 255, 0.16);
+    --text: #ece9e4;
+    --muted: #9c99a6;
+    --dim: #6e6b7a;
+    --red: #e0433f;
+    --gold: #d9a441;
+    --teal: #4fd1c5;
+    --radius: 16px;
+    --max: 1160px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(900px 500px at 78% -10%, rgba(224, 67, 63, 0.13), transparent 60%),
+      radial-gradient(700px 420px at 5% 8%, rgba(79, 209, 197, 0.06), transparent 60%);
+    background-repeat: no-repeat;
+  }
+
+  ::selection { background: rgba(224, 67, 63, 0.35); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 64px 0; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 46px 0; }
+  }
+}
+
 @layer components {
+  /* 手机 mock：一次性视觉，用伪元素做扫描线 */
+  .phone {
+    width: min(300px, 80%);
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    border-radius: 34px;
+    padding: 9px;
+    background: linear-gradient(160deg, #2a2a33, #0d0d12);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    position: relative;
+  }
+  .phone .screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+    overflow: hidden;
+    position: relative;
+    background:
+      radial-gradient(120px 200px at 20% 15%, rgba(217, 164, 65, 0.5), transparent 70%),
+      radial-gradient(220px 260px at 85% 30%, rgba(224, 67, 63, 0.45), transparent 70%),
+      linear-gradient(175deg, #231a26 0%, #14121c 45%, #0c0c12 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+  }
+  .phone .screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 3px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .phone .tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: rgba(224, 67, 63, 0.9);
+    font-weight: 700;
+  }
+  .phone .frame-label {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.1em;
+  }
+  .phone .look {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.14em;
+    margin-bottom: 8px;
+  }
+  .phone .line {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.3;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6);
+  }
+  .phone .sub {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 10px;
+    letter-spacing: 0.08em;
+  }
+  .phone .bar {
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.16);
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .phone .bar i {
+    display: block;
+    height: 100%;
+    width: 62%;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+  }
 
-/* ============ 漫剧工坊 · 教学站 ============ */
-:root{
-  --bg:#0a0a0e;
-  --bg-soft:#0f0f15;
-  --panel:#14141c;
-  --panel-2:#191922;
-  --line:rgba(255,255,255,.09);
-  --line-strong:rgba(255,255,255,.16);
-  --text:#ece9e4;
-  --muted:#9c99a6;
-  --dim:#6e6b7a;
-  --red:#e0433f;
-  --red-soft:rgba(224,67,63,.14);
-  --gold:#d9a441;
-  --gold-soft:rgba(217,164,65,.12);
-  --teal:#4fd1c5;
-  --radius:16px;
-  --max:1160px;
+  @media (max-width: 980px) {
+    .phone { width: 230px; }
+  }
+
+  /* 长文排版：相当于 prose 层 */
+  .doc-main h1 {
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.2;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+  }
+  .doc-main .sub {
+    color: var(--muted);
+    font-size: 16.5px;
+    margin: 0 0 40px;
+    max-width: 720px;
+  }
+  .doc-main h2 {
+    font-size: 25px;
+    margin: 56px 0 16px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 90px;
+  }
+  .doc-main h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .doc-main h3 {
+    font-size: 18px;
+    margin: 30px 0 10px;
+    color: #fff;
+  }
+  .doc-main p {
+    color: #c2bec9;
+    margin: 0 0 14px;
+  }
+  .doc-main ul,
+  .doc-main ol {
+    color: #c2bec9;
+    padding-left: 22px;
+    margin: 0 0 18px;
+  }
+  .doc-main li { margin: 7px 0; }
+  .doc-main strong { color: #fff; font-weight: 700; }
+  .doc-main code {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 0.86em;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    color: #f0c987;
+  }
+
+  [data-toc] a.on {
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  .js .rv {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .js .rv.in {
+    opacity: 1;
+    transform: none;
+  }
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,-apple-system,sans-serif;
-  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
-  background-image:
-    radial-gradient(900px 500px at 78% -10%,rgba(224,67,63,.13),transparent 60%),
-    radial-gradient(700px 420px at 5% 8%,rgba(79,209,197,.06),transparent 60%);
-  background-repeat:no-repeat;
-}
-::selection{background:rgba(224,67,63,.35)}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
-/* ---- top bar ---- */
-/* ---- hero ---- */
+@page { size: A4; margin: 16mm; }
 
-
-/* phone mock */
-.phone{
-  width:min(300px,80%);aspect-ratio:9/16;margin:0 auto;border-radius:34px;padding:9px;
-  background:linear-gradient(160deg,#2a2a33,#0d0d12);
-  box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);
-  position:relative;
-}
-.phone .screen{
-  width:100%;height:100%;border-radius:27px;overflow:hidden;position:relative;
-  background:
-    radial-gradient(120px 200px at 20% 15%,rgba(217,164,65,.5),transparent 70%),
-    radial-gradient(220px 260px at 85% 30%,rgba(224,67,63,.45),transparent 70%),
-    linear-gradient(175deg,#231a26 0%,#14121c 45%,#0c0c12 100%);
-  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;
-}
-.phone .screen::before{
-  content:"";position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:100% 3px;opacity:.5;pointer-events:none;
-}
-.phone .tag{
-  position:absolute;top:16px;left:16px;font-size:10px;letter-spacing:.16em;
-  padding:3px 8px;border-radius:5px;background:rgba(224,67,63,.9);font-weight:700;
-}
-.phone .frame-label{
-  position:absolute;top:16px;right:16px;font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;
-}
-.phone .look{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.14em;margin-bottom:8px}
-.phone .line{font-size:23px;font-weight:800;line-height:1.3;text-shadow:0 2px 18px rgba(0,0,0,.6)}
-.phone .sub{font-size:11px;color:rgba(255,255,255,.55);margin-top:10px;letter-spacing:.08em}
-.phone .bar{height:3px;border-radius:2px;background:rgba(255,255,255,.16);margin-top:16px;overflow:hidden}
-.phone .bar i{display:block;height:100%;width:62%;background:linear-gradient(90deg,var(--red),var(--gold))}
-
-/* stats */
-/* ---- sections ---- */
-section{padding:64px 0}
-
-/* stage grid */
-.grid-2{grid-template-columns:repeat(2,1fr)}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-4{grid-template-columns:repeat(4,1fr)}
-/* pipeline strip */
-
-/* doc layout */
-[data-toc] a.on{color:var(--red);font-weight:600}
-
-.doc-main h1{font-size:clamp(30px,3.6vw,44px);line-height:1.2;margin:0 0 14px;letter-spacing:-.02em}
-.doc-main .sub{color:var(--muted);font-size:16.5px;margin:0 0 40px;max-width:720px}
-.doc-main h2{
-  font-size:25px;margin:56px 0 16px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-.01em;
-  scroll-margin-top:90px;
-}
-.doc-main h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
-.doc-main h3{font-size:18px;margin:30px 0 10px;color:#fff}
-.doc-main p{color:#c2bec9;margin:0 0 14px}
-.doc-main ul,.doc-main ol{color:#c2bec9;padding-left:22px;margin:0 0 18px}
-.doc-main li{margin:7px 0}
-.doc-main strong{color:#fff;font-weight:700}
-.doc-main code{
-  background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:5px;
-  padding:1px 6px;font-size:.86em;font-family:ui-monospace,Menlo,Consolas,monospace;color:#f0c987;
-}
-
-/* callout */
-
-
-/* table */
-
-/* tool / calculator */
-
-
-/* beats timeline */
-
-
-/* misc */
-
-/* reveal */
-.js .rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-.js .rv.in{opacity:1;transform:none}
-
-@media(max-width:980px){
-  .phone{width:230px}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .grid-3{grid-template-columns:1fr 1fr}
-  .pipe{grid-template-columns:repeat(4,1fr);gap:8px}
-  .pipe .p::after{display:none}
-  .fields{grid-template-columns:repeat(2,1fr)}
-  .results{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:640px){
-  .wrap{padding:0 16px}
-  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
-  .fields{grid-template-columns:1fr 1fr}
-  section{padding:46px 0}
-  .tool{padding:18px}
-}
-
-
-@page{size:A4;margin:16mm}
-
-
-/* ============ 报价库 ============ */
-.proj-hint{margin-top:12px;font-size:13px;color:var(--dim)}
-@media print{.page-head{display:none}}
-
-
-/* ============ 保存报价 ============ */
-@media print{.save-row,.save-done{display:none !important}}
-
-/* ============ 学习资源 ============ */
-}

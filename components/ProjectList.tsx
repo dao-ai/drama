@@ -145,7 +145,7 @@ export default function ProjectList({
         </table>
       </div>
 
-      <div className="proj-hint">
+      <div className="mt-3 text-[13px] text-dim">
         勾选 2–3 个方案做对比，最多 3 个。第一个勾选的作为基准。
       </div>
 

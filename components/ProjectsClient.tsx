@@ -30,7 +30,7 @@ export default function ProjectsClient() {
   useEffect(load, []);
 
   if (views === null) {
-    return <p className="proj-hint">读取本机报价…</p>;
+    return <p className="mt-3 text-[13px] text-dim">读取本机报价…</p>;
   }
 
   return (

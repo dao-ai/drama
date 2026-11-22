@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 4180",
+    "prebuild": "node scripts/check-css.mjs",
     "build": "next build",
     "preview": "python3 -m http.server 4180 -d out",
-    "lint": "next lint"
+    "lint:css": "node scripts/check-css.mjs"
   },
   "dependencies": {
     "next": "16.4.6",
