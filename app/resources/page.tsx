@@ -108,20 +108,26 @@ function Group({ title, kicker, items }: { title: string; kicker: string; items:
   return (
     <section style={{ padding: "0 0 8px" }}>
       <div className="kicker" style={{ marginBottom: 10 }}>{kicker} · {title}</div>
-      <div className="res-list">
+      <div className="mb-6 grid gap-3.5 sm:grid-cols-2">
         {items.map((it) => (
-          <a className="res-item" key={it.href} href={it.href} target="_blank" rel="noreferrer">
-            <div className="res-top">
-              <h3>{it.title}</h3>
-              <span className="res-go">↗</span>
+          <a
+            className="block rounded-[14px] border border-line bg-panel p-[18px] transition hover:-translate-y-0.5 hover:border-white/15"
+            key={it.href}
+            href={it.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="flex items-start justify-between gap-2.5">
+              <h3 className="m-0 text-base leading-snug text-white">{it.title}</h3>
+              <span className="text-[13px] text-dim">↗</span>
             </div>
-            <div className="res-tags">
+            <div className="my-2.5 flex flex-wrap gap-1.5">
               {it.tags.map((t) => (
                 <span className="pill" key={t}>{t}</span>
               ))}
             </div>
-            <p>{it.note}</p>
-            <div className="res-best">适合：{it.best}</div>
+            <p className="m-0 text-[13.5px] leading-relaxed text-muted">{it.note}</p>
+            <div className="mt-2.5 text-xs text-gold">适合：{it.best}</div>
           </a>
         ))}
       </div>

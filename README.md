@@ -47,6 +47,10 @@ npm run preview   # 用静态服务器跑 out/，4180
 - 报价单参数走 URL，可分享、可刷新
 - 换设备或清缓存会丢数据；需要多端同步再接后端
 
+## 样式
+- Tailwind CSS v4（PostCSS 插件），设计 token 定义在 `app/globals.css` 的 `@theme` 里
+- 导航、页脚、学习资源卡片使用 utility class；长文排版、表格、工具面板等重复样式收在 `@layer components`，后续可按页逐步迁成 utility
+
 ## 结构
 
 - `app/*/page.tsx` 路由页面
