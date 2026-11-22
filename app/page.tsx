@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PhoneMock from "@/components/PhoneMock";
 
 export const metadata: Metadata = {
   title: "漫剧工坊 · 竖屏漫剧制作教学",
@@ -74,20 +75,7 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <div className="phone">
-            <div className="screen">
-              <span className="tag">EP 01</span>
-              <span className="frame-label">9:16 · 00:04</span>
-              <div className="look">苏念 · 近景</div>
-              <div className="line">
-                「愿意。
-                <br />
-                愿意请大家看个东西。」
-              </div>
-              <div className="sub">婚礼现场 · 第 8 镜 · 4s</div>
-              <div className="bar"><i /></div>
-            </div>
-          </div>
+          <PhoneMock />
         </div>
       </section>
 

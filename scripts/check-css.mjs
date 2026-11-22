@@ -6,17 +6,10 @@ const ALLOWED = new Set([
   "js",
   "wrap",
   "doc-main",
-  "phone",
+  "sub", // 文档副标题（.doc-main .sub）
   "progress",
   "rv",
   // phone mock 内部
-  "screen",
-  "tag",
-  "frame-label",
-  "look",
-  "line",
-  "sub",
-  "bar",
   "on",
   "in",
 ]);
