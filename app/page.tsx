@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "漫剧工坊 · 竖屏漫剧制作教学",
@@ -15,7 +16,7 @@ export default function Page() {
       <h1>从一句 logline<br />到 <em>80 集成片</em></h1>
       <p className="lede">漫剧不是「画得好看」就行。它是一条工业流水线：剧本 → 视觉开发 → 分镜 → 生成 → 音频 → 剪辑 → 分发。这个站把每个阶段的<strong>输入、产出、关卡和成本</strong>拆开给你看，附可用的提示词与计算器。</p>
       <div className="btnrow">
-        <a className="btn btn-primary" href="/workflow">开始八阶段 →</a>
+        <Link className="btn btn-primary" href="/workflow">开始八阶段 →</Link>
         <a className="btn btn-ghost" href="#case">看一集怎么落地</a>
       </div>
     </div>
@@ -58,14 +59,14 @@ export default function Page() {
     </div>
 
     <div className="grid grid-4" style={{ marginTop: "26px" }}>
-      <a className="card stage-card rv" href="/workflow#s0"><span className="no">S0</span><div className="ico">🎯</div><h3>立项</h3><p>赛道、平台、预算、形态。一页纸决定这剧值不值得做。</p></a>
-      <a className="card stage-card rv" href="/story"><span className="no">S1</span><div className="ico">✍️</div><h3>剧本</h3><p>logline → 人物小传 → 分集大纲 → 单集剧本。前三集定生死。</p></a>
-      <a className="card stage-card rv" href="/visual"><span className="no">S2</span><div className="ico">🎨</div><h3>视觉开发</h3><p>画风、三视图、角色锚点、场景底板。一致性优先于精致度。</p></a>
-      <a className="card stage-card rv" href="/storyboard"><span className="no">S3</span><div className="ico">🎬</div><h3>分镜</h3><p>镜号、时长、景别、台词、动效方式。分镜就是预算表。</p></a>
-      <a className="card stage-card rv" href="/storyboard#gen"><span className="no">S4</span><div className="ico">🧩</div><h3>生成</h3><p>风格测试 → 锁 seed → 批量关键帧 → 只给必要的镜头做视频。</p></a>
-      <a className="card stage-card rv" href="/workflow#s5"><span className="no">S5</span><div className="ico">🔊</div><h3>音频</h3><p>音色表、语速、情绪、BGM、音效、混音。声音决定「贵不贵」。</p></a>
-      <a className="card stage-card rv" href="/workflow#s6"><span className="no">S6</span><div className="ico">✂️</div><h3>剪辑包装</h3><p>前 3 秒、字幕安全区、封面标题。成片在这里定型。</p></a>
-      <a className="card stage-card rv" href="/workflow#s7"><span className="no">S7</span><div className="ico">📈</div><h3>分发复盘</h3><p>完播、追更、付费、ROI。掉量要能归因到具体结构。</p></a>
+      <Link className="card stage-card rv" href="/workflow#s0"><span className="no">S0</span><div className="ico">🎯</div><h3>立项</h3><p>赛道、平台、预算、形态。一页纸决定这剧值不值得做。</p></Link>
+      <Link className="card stage-card rv" href="/story"><span className="no">S1</span><div className="ico">✍️</div><h3>剧本</h3><p>logline → 人物小传 → 分集大纲 → 单集剧本。前三集定生死。</p></Link>
+      <Link className="card stage-card rv" href="/visual"><span className="no">S2</span><div className="ico">🎨</div><h3>视觉开发</h3><p>画风、三视图、角色锚点、场景底板。一致性优先于精致度。</p></Link>
+      <Link className="card stage-card rv" href="/storyboard"><span className="no">S3</span><div className="ico">🎬</div><h3>分镜</h3><p>镜号、时长、景别、台词、动效方式。分镜就是预算表。</p></Link>
+      <Link className="card stage-card rv" href="/storyboard#gen"><span className="no">S4</span><div className="ico">🧩</div><h3>生成</h3><p>风格测试 → 锁 seed → 批量关键帧 → 只给必要的镜头做视频。</p></Link>
+      <Link className="card stage-card rv" href="/workflow#s5"><span className="no">S5</span><div className="ico">🔊</div><h3>音频</h3><p>音色表、语速、情绪、BGM、音效、混音。声音决定「贵不贵」。</p></Link>
+      <Link className="card stage-card rv" href="/workflow#s6"><span className="no">S6</span><div className="ico">✂️</div><h3>剪辑包装</h3><p>前 3 秒、字幕安全区、封面标题。成片在这里定型。</p></Link>
+      <Link className="card stage-card rv" href="/workflow#s7"><span className="no">S7</span><div className="ico">📈</div><h3>分发复盘</h3><p>完播、追更、付费、ROI。掉量要能归因到具体结构。</p></Link>
     </div>
   </section>
 
@@ -141,8 +142,8 @@ export default function Page() {
       </table>
     </div>
     <div className="btnrow rv">
-      <a className="btn btn-primary" href="/storyboard#calc">算一下你的单集成本 →</a>
-      <a className="btn btn-ghost" href="/checklist">打开上线检查表</a>
+      <Link className="btn btn-primary" href="/storyboard#calc">算一下你的单集成本 →</Link>
+      <Link className="btn btn-ghost" href="/checklist">打开上线检查表</Link>
     </div>
   </section>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { toQuery, yuan, yuanWan, type EstimateInput } from "@/lib/estimate";
 
@@ -45,10 +44,14 @@ const ROWS: {
   { key: "share", label: "关键帧占比", value: (p) => p.frameShare.toFixed(0) + "%" },
 ];
 
-export default function ProjectList({ projects }: { projects: ProjectView[] }) {
-  const router = useRouter();
+export default function ProjectList({
+  projects,
+  onDelete,
+}: {
+  projects: ProjectView[];
+  onDelete: (id: string) => void;
+}) {
   const [picked, setPicked] = useState<string[]>([]);
-  const [busy, setBusy] = useState<string | null>(null);
 
   const selected = useMemo(
     () =>
@@ -67,19 +70,10 @@ export default function ProjectList({ projects }: { projects: ProjectView[] }) {
     });
   };
 
-  const remove = async (id: string) => {
+  const remove = (id: string) => {
     if (!window.confirm("删除这个报价？操作不可撤销。")) return;
-    setBusy(id);
-    try {
-      const res = await fetch("/api/projects?id=" + id, { method: "DELETE" });
-      if (!res.ok) throw new Error("delete failed");
-      setPicked((prev) => prev.filter((v) => v !== id));
-      router.refresh();
-    } catch {
-      window.alert("删除失败，稍后再试。");
-    } finally {
-      setBusy(null);
-    }
+    onDelete(id);
+    setPicked((prev) => prev.filter((v) => v !== id));
   };
 
   if (projects.length === 0) {
@@ -141,12 +135,8 @@ export default function ProjectList({ projects }: { projects: ProjectView[] }) {
                   >
                     打开
                   </Link>
-                  <button
-                    onClick={() => remove(p.id)}
-                    disabled={busy === p.id}
-                    className="linkbtn"
-                  >
-                    {busy === p.id ? "删除中…" : "删除"}
+                  <button onClick={() => remove(p.id)} className="linkbtn">
+                    删除
                   </button>
                 </td>
               </tr>

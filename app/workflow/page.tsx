@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "八阶段全流程",
@@ -66,7 +67,7 @@ export default function Page() {
 <div className="row"><div className="k">产出</div><div className="v">人物小传 + 分集大纲 + 单集剧本（镜头级：镜号、时长、景别、画面、台词、音效）。</div></div>
 <div className="row"><div className="k">关卡</div><div className="v"><b>前三集每集至少有 1 个钩子；每集结尾的扣指向下一集的具体事件；每集有 1 句能被截图传播的台词。</b></div></div>
 <div className="row"><div className="k">常见坑</div><div className="v">用旁白交代背景（观众划走）；台词文绉绉（配音一读就假）；一集塞三条主线（信息过载）。</div></div>
-<div className="row"><div className="k">单集结构</div><div className="v">冷开场 3–5s → 铺垫 → 冲突升级 → 反转 → 后果 → 结尾扣。详细节拍与时间码见 <a href="/story" style={{ color: "var(--gold)" }}>剧本页</a>。</div></div>
+<div className="row"><div className="k">单集结构</div><div className="v">冷开场 3–5s → 铺垫 → 冲突升级 → 反转 → 后果 → 结尾扣。详细节拍与时间码见 <Link href="/story" style={{ color: "var(--gold)" }}>剧本页</Link>。</div></div>
   </div>
 </div>
     
@@ -158,7 +159,7 @@ export default function Page() {
     </div>
     <div className="note">
       <span className="label">算账顺序</span>
-      先算<b>单集生成成本</b>（见 <a href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算器</a>），乘以集数，再加上音频、剪辑、投流。如果总数超过预算，优先砍 A 级镜头比例和集数，<b>不要砍角色一致性</b>。
+      先算<b>单集生成成本</b>（见 <Link href="/storyboard#calc" style={{ color: "var(--gold)" }}>成本计算器</Link>），乘以集数，再加上音频、剪辑、投流。如果总数超过预算，优先砍 A 级镜头比例和集数，<b>不要砍角色一致性</b>。
     </div>
   </div>
 </div>
