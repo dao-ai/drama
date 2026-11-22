@@ -27,7 +27,7 @@ export default function Page() {
 
     <h2 id="sheet">分镜表字段</h2>
     <p>一张能直接派活的分镜表，至少要有这七列。少一列，执行时就要回来问一次。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>字段</th><th>写法</th><th>作用</th></tr></thead>
         <tbody>
@@ -46,17 +46,17 @@ export default function Page() {
     <p>全部生成视频，成本会翻三倍；全部用静帧，观众会觉得是 PPT。正确的做法是分级。</p>
     <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
-        <div><span className="pill red">A 级</span></div>
+        <div><span className="inline-block rounded-full border border-flame/35 bg-flame/10 px-2.5 py-[2px] text-[11px] text-[#ff8a80]">A 级</span></div>
         <h3>必须视频</h3>
         <p>情绪转折、关键动作、群像场面。3–6 秒，全剧不超过总镜数的 30%。</p>
       </div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
-        <div><span className="pill gold">B 级</span></div>
+        <div><span className="inline-block rounded-full border border-gold/35 bg-gold/10 px-2.5 py-[2px] text-[11px] text-gold">B 级</span></div>
         <h3>关键帧 + 2D 动效</h3>
         <p>对话、反应、氛围。推拉、呼吸、视差就能撑住，是性价比最高的档位。</p>
       </div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
-        <div><span className="pill">C 级</span></div>
+        <div><span className="inline-block rounded-full border border-white/15 px-2.5 py-[2px] text-[11px] text-muted">C 级</span></div>
         <h3>平面 / 字幕卡</h3>
         <p>大屏、转账记录、聊天界面、时间地点卡。直接做平面设计，不生成。</p>
       </div>
@@ -67,7 +67,7 @@ export default function Page() {
     </div>
 
     <h2 id="motion">动效菜单（B 级镜头的九种做法）</h2>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>动效</th><th>做法</th><th>适合</th></tr></thead>
         <tbody>
@@ -86,7 +86,7 @@ export default function Page() {
     <p>同一集里动效不要超过四种，否则会显得廉价。情绪最强的两三个点用「震屏 + 静音一拍」，其余保持克制。</p>
 
     <h2 id="example">分镜示例（《退婚夜》E1 前四镜）</h2>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>镜</th><th>时长</th><th>景别</th><th>画面</th><th>台词</th><th>动效</th></tr></thead>
         <tbody>
@@ -115,7 +115,7 @@ export default function Page() {
 
     <h2 id="record">生成记录与返工</h2>
     <p>每次生成记一行。这不是形式主义——它是你唯一能算出「单集真实成本」的数据来源。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>镜号</th><th>模型</th><th>seed</th><th>参考图</th><th>耗时</th><th>费用</th><th>结果</th></tr></thead>
         <tbody>
@@ -133,7 +133,7 @@ export default function Page() {
     <p style={{ marginTop: "14px", color: "var(--dim)", fontSize: "13px" }}>注意：此计算不含投流、剧本人力与平台分成。投流通常按流水分成另算，别混进制作成本里自我安慰。</p>
 
     <h2 id="fps">导出规格</h2>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>项目</th><th>规格</th></tr></thead>
         <tbody>

@@ -58,7 +58,7 @@ export default function Page() {
 
     <h2 id="anchor">锚点设计</h2>
     <p>好的锚点必须满足三条：<strong>能画出来、左右不对称、不随表情消失</strong>。下面是一组实际在用的锚点：</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>角色</th><th>锚点</th><th>为什么选它</th></tr></thead>
         <tbody>
@@ -124,7 +124,7 @@ export default function Page() {
     <p>按项目追加：古装加 <code>modern clothing, zipper, wristwatch</code>；群像加 <code>cloned faces, identical twins, merged bodies</code>。</p>
 
     <h2 id="fail">六种典型翻车</h2>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>现象</th><th>原因</th><th>修法</th></tr></thead>
         <tbody>

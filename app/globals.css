@@ -146,13 +146,6 @@ section{padding:64px 0}
 
 
 /* table */
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin:18px 0 24px}
-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
-th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:rgba(255,255,255,.04);font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;white-space:nowrap}
-tr:last-child td{border-bottom:none}
-td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
-tbody tr:hover{background:rgba(255,255,255,.02)}
 
 /* tool / calculator */
 .tool{
@@ -188,9 +181,6 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .beat.hot .track i{background:linear-gradient(90deg,var(--gold),#ffd98a)}
 
 /* misc */
-.pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted);margin-right:6px}
-.pill.red{color:#ff8a80;border-color:rgba(224,67,63,.35);background:var(--red-soft)}
-.pill.gold{color:var(--gold);border-color:rgba(217,164,65,.35);background:var(--gold-soft)}
 .kv{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:0 0 18px}
 .kv b{color:var(--text)}
 .divider{height:1px;background:var(--line);margin:40px 0}
@@ -235,8 +225,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .quote table{width:100%;min-width:0;border-collapse:collapse;font-size:13.5px}
 .quote th{background:#ece8df;color:#4a463d;border-bottom:1px solid #d8d2c6;padding:10px 12px;font-size:12px;letter-spacing:.04em}
 .quote td{padding:10px 12px;border-bottom:1px solid #e2ddd2;color:#2a2823;vertical-align:top}
-.quote tr:last-child td{border-bottom:none}
-.quote tbody tr:hover{background:transparent}
+.quote .quote tbody tr:hover{background:transparent}
 .q-detail{color:#8a8578;font-size:12px}
 .q-num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .q-total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:22px;padding-top:18px;border-top:2px solid #1a1a1f;flex-wrap:wrap}

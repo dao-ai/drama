@@ -164,7 +164,7 @@ export default function Page() {
           用样片《退婚夜，我直播爆了豪门黑料》第一集拆一遍：137 秒、36 镜、4 个场景、6 个主要角色。
         </SectionHead>
 
-        <div className="tablewrap rv">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums rv">
           <table>
             <thead><tr><th>环节</th><th>本集做法</th><th>省成本的关键动作</th></tr></thead>
             <tbody>
@@ -187,7 +187,7 @@ export default function Page() {
         <SectionHead kicker="First 7 Days" title="七天做出可验证的样片">
           不要一上来写 80 集。先跑完这条闭环，拿到三个数字：单集成本、返工率、完播率。
         </SectionHead>
-        <div className="tablewrap rv">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums rv">
           <table>
             <thead><tr><th>天</th><th>任务</th><th>当天必须交付</th></tr></thead>
             <tbody>

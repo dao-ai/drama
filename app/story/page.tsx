@@ -49,7 +49,7 @@ export default function Page() {
 
     <h2 id="sixbeats">单集六拍</h2>
     <p>这是经过验证的默认结构，90% 的集都可以套。熟练之后再打破它。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>拍</th><th>占比</th><th>功能</th><th>写法要点</th></tr></thead>
         <tbody>
@@ -70,7 +70,7 @@ export default function Page() {
 
     <h2 id="first3">前三集法则</h2>
     <p>平台给每部剧的流量窗口非常短。前三集决定它能不能进入推荐池，所以这三集的任务是固定的：</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>集</th><th>任务</th><th>必须出现</th></tr></thead>
         <tbody>
@@ -115,7 +115,7 @@ export default function Page() {
 
     <h2 id="check">信息点检查表</h2>
     <p>每集写完，用这张表过一遍。任何一项打不了勾，都别进分镜。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>检查项</th><th>标准</th></tr></thead>
         <tbody>

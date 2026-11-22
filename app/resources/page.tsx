@@ -123,7 +123,7 @@ function Group({ title, kicker, items }: { title: string; kicker: string; items:
             </div>
             <div className="my-2.5 flex flex-wrap gap-1.5">
               {it.tags.map((t) => (
-                <span className="pill" key={t}>{t}</span>
+                <span className="inline-block rounded-full border border-white/15 px-2.5 py-[2px] text-[11px] text-muted" key={t}>{t}</span>
               ))}
             </div>
             <p className="m-0 text-[13.5px] leading-relaxed text-muted">{it.note}</p>

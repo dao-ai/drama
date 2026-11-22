@@ -16,7 +16,7 @@ const COST = {
 function Cost({ level }: { level: "low" | "mid" | "high" }) {
   return (
     <span
-      className="pill"
+      className="inline-block rounded-full border border-white/15 px-2.5 py-[2px] text-[11px] text-muted"
       title={
         level === "low" ? "低：单集可控在几十元级" : level === "mid" ? "中：单集百元级" : "高：单集数百元起"
       }
@@ -75,7 +75,7 @@ export default function ToolsPage() {
 
         <h2 id="text">文本 / 剧本</h2>
         <p>剧本环节的差异主要在中文语感、长上下文和结构稳定性。写 80 集大纲时，长上下文比单集文笔更重要。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>模型</th><th>强项</th><th>短板</th><th>适合</th><th>成本</th></tr>
@@ -126,7 +126,7 @@ export default function ToolsPage() {
 
         <h2 id="image">图像 / 关键帧</h2>
         <p>漫剧最关键的一环。判断标准只有三个：<b>角色一致性、手部/人脸、画面内文字</b>。风格好看是加分项，不是决定项。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>工具</th><th>强项</th><th>短板</th><th>适合</th><th>成本</th></tr>
@@ -180,7 +180,7 @@ export default function ToolsPage() {
 
         <h2 id="video">视频 / 动效</h2>
         <p>漫剧不需要「全片视频」。只有 A 级镜头值得生成，判断标准是：<b>有没有人物动作或表情变化</b>。其余用关键帧 + 2D 动效。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>工具</th><th>强项</th><th>短板</th><th>适合</th><th>成本</th></tr>
@@ -238,7 +238,7 @@ export default function ToolsPage() {
 
         <h2 id="voice">语音 / 配音</h2>
         <p>漫剧的「贵不贵」很大程度由声音决定。选型看四点：中文自然度、情绪控制、克隆稳定性、商用授权。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>工具</th><th>强项</th><th>短板</th><th>适合</th><th>成本</th></tr>
@@ -285,7 +285,7 @@ export default function ToolsPage() {
 
         <h2 id="combo">三档组合</h2>
         <p>别从「最强模型」开始配，从「这个项目的预算和返工容忍度」开始配。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>档位</th><th>组合</th><th>单集成本量级</th><th>适合</th></tr>
@@ -318,7 +318,7 @@ export default function ToolsPage() {
 
         <h2 id="test">三镜测试法</h2>
         <p>任何模型在进入产线前，先跑这 3 个镜头。全部通过再谈批量。</p>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>测试镜</th><th>内容</th><th>通过标准</th></tr>
@@ -345,7 +345,7 @@ export default function ToolsPage() {
         <p>同时记录：单镜耗时、单镜费用、返工次数。三个数字出来，模型的好坏就不用争了。</p>
 
         <h2 id="buy">采购检查表</h2>
-        <div className="tablewrap">
+        <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
           <table>
             <thead>
               <tr><th>项目</th><th>要问清楚</th></tr>

@@ -30,7 +30,7 @@ export default function Page() {
 
     <h2 id="handoff">先看交接物</h2>
     <p>流水线卡住，90% 是因为上游交的东西下游用不了。下面这张表是全流程的「接口定义」。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>阶段</th><th>交给下游的东西</th><th>下游拿它干什么</th></tr></thead>
         <tbody>
@@ -121,7 +121,7 @@ export default function Page() {
 
     <h2 id="ratio">成本结构：钱到底花在哪</h2>
     <p>下面是一集 110 秒、36 镜的漫剧的典型成本分布（比例示意，具体单价随供应商变化）。注意两件事：<strong>生成是大头</strong>，<strong>返工是隐性大头</strong>。</p>
-    <div className="tablewrap">
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
       <table>
         <thead><tr><th>环节</th><th>占比</th><th>可控手段</th></tr></thead>
         <tbody>
