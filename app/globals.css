@@ -396,3 +396,30 @@ footer .wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-con
 
 
 @page{size:A4;margin:16mm}
+
+
+/* ============ 报价库 ============ */
+.page-head{padding:56px 0 80px}
+.page-head h1{font-size:clamp(30px,3.6vw,44px);line-height:1.2;margin:0 0 12px;letter-spacing:-.02em}
+.page-head .sec-head{margin-bottom:28px}
+.linkbtn{
+  background:none;border:none;color:var(--dim);font-size:13px;cursor:pointer;
+  font-family:inherit;padding:0;text-decoration:underline;text-underline-offset:3px;
+}
+.linkbtn:hover{color:#ff8a80}
+.linkbtn:disabled{opacity:.5;cursor:default}
+.proj-hint{margin-top:12px;font-size:13px;color:var(--dim)}
+.delta{margin-left:8px;font-size:11.5px;font-variant-numeric:tabular-nums}
+.delta.up{color:#ff8a80}
+.delta.down{color:var(--teal)}
+@media print{.page-head{display:none}}
+
+
+/* ============ 保存报价 ============ */
+.save-row{max-width:900px;margin:18px auto 0;display:flex;gap:10px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.save-name{background:#0b0b10;border:1px solid var(--line-strong);border-radius:10px;color:#fff;padding:10px 12px;font-size:14px;font-family:inherit;width:300px;max-width:100%}
+.save-name:focus{outline:none;border-color:rgba(224,67,63,.6);box-shadow:0 0 0 3px rgba(224,67,63,.12)}
+.save-done{max-width:900px;margin:18px auto 0;text-align:right;color:var(--teal);font-size:14px}
+.save-done a{color:var(--gold)}
+.save-err{color:#ff8a80;font-size:12.5px}
+@media print{.save-row,.save-done{display:none !important}}

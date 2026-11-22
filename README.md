@@ -26,6 +26,8 @@ npm run start   # 4180
 | `/checklist` | 36 项上线检查，localStorage 保存 |
 | `/quote` | 制作报价单：明细、合计、打印/PDF、下载 CSV（不在导航中） |
 | `/api/estimate` | GET/POST 成本估算，支持 `format=csv` 导出 |
+| `/projects` | 报价库：保存的方案、多版本对比、删除 |
+| `/api/projects` | GET 列表 / POST 保存 / DELETE 删除（`data/estimates.json`） |
 
 ## 报价单与 API
 - 分镜页计算器底部「生成报价单」→ `/quote?frames=…&episodes=…`，参数直接进 URL，可分享/收藏
@@ -38,6 +40,12 @@ npm run start   # 4180
   curl -OJ "http://127.0.0.1:4180/api/estimate?format=csv"
   ```
 - 计价逻辑集中在 `lib/estimate.ts`，页面、API、CSV 共用一套计算，改单价只改一处
+
+## 报价库
+- 报价页「保存到报价库」→ 写入 `web/data/estimates.json`（已 gitignore）
+- `/projects` 勾选 2–3 个方案对比，第一个勾选为基准，成本项显示百分比差异
+- 文件存储 + 串行写入，适合单机单用户；多实例或多人需要换 SQLite/Postgres
+- 最多保留 200 条，超出丢弃最旧
 
 ## 结构
 - `app/*/page.tsx` 六个路由，服务端组件，内容静态渲染

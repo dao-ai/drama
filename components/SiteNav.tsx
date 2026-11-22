@@ -9,6 +9,7 @@ const items = [
   { href: "/story", label: "剧本" },
   { href: "/visual", label: "视觉 / 提示词" },
   { href: "/storyboard", label: "分镜 / 成本" },
+  { href: "/projects", label: "报价库" },
   { href: "/checklist", label: "上线清单" },
 ];
 

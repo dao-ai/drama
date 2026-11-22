@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { estimate, parseInput, toQuery, yuan, yuanWan } from "@/lib/estimate";
 import PrintButton from "@/components/PrintButton";
+import SaveProject from "@/components/SaveProject";
 
 export const metadata: Metadata = {
   title: "制作报价单",
@@ -113,6 +114,8 @@ export default async function QuotePage({
           </div>
         )}
       </div>
+
+      <SaveProject input={input} />
 
       <div className="q-actions">
         <Link className="btn btn-ghost" href={"/storyboard?" + toQuery(input) + "#calc"}>
