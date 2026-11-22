@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN" className="js">
       <body>
-        <div className="progress" />
+        <div className="progress print:hidden" />
         <SiteNav />
         {children}
         <SiteFooter />
