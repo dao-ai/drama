@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       </div>
       <ProjectsClient />
       <div style={{ marginTop: 28, display: "flex", gap: 12, flexWrap: "wrap" }}>
-        <Link className="btn btn-ghost" href="/storyboard#calc">
+        <Link className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]" href="/storyboard#calc">
           去调新方案
         </Link>
       </div>

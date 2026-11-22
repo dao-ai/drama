@@ -37,10 +37,10 @@ export default function BeatPlanner() {
 
   return (
     <>
-      <div className="tool">
+      <div className="rounded-[20px] border border-white/15 bg-gradient-to-br from-[#17171f] to-[#0e0e14] p-[26px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:text-[19px] [&_.hint]:mb-[22px] [&_.hint]:mt-0 [&_.hint]:text-[13.5px] [&_.hint]:text-muted">
         <h3>单集节拍分配</h3>
         <p className="hint">按六拍比例自动计算时间码，末端自动对齐总时长。</p>
-        <div className="fields" style={{ gridTemplateColumns: "220px 1fr" }}>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 [&_label]:mb-[7px] [&_label]:block [&_label]:text-xs [&_label]:tracking-[0.06em] [&_label]:text-muted [&_input]:w-full [&_input]:rounded-[10px] [&_input]:border [&_input]:border-white/15 [&_input]:bg-[#0b0b10] [&_input]:px-3 [&_input]:py-[10px] [&_input]:text-[15px] [&_input]:text-white [&_input]:outline-none [&_input]:transition [&_select]:w-full [&_select]:rounded-[10px] [&_select]:border [&_select]:border-white/15 [&_select]:bg-[#0b0b10] [&_select]:px-3 [&_select]:py-[10px] [&_select]:text-[15px] [&_select]:text-white [&_select]:outline-none [&_select]:transition [&_input:focus]:border-flame/60 [&_input:focus]:ring-[3px] [&_input:focus]:ring-flame/10 [&_select:focus]:border-flame/60 [&_select:focus]:ring-[3px] [&_select:focus]:ring-flame/10" style={{ gridTemplateColumns: "220px 1fr" }}>
           <div className="field">
             <label htmlFor="beat-dur">单集时长（秒）</label>
             <input

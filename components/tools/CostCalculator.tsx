@@ -88,10 +88,10 @@ export default function CostCalculator() {
   }, [values]);
 
   return (
-    <div className="tool">
+    <div className="rounded-[20px] border border-white/15 bg-gradient-to-br from-[#17171f] to-[#0e0e14] p-[26px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:text-[19px] [&_.hint]:mb-[22px] [&_.hint]:mt-0 [&_.hint]:text-[13.5px] [&_.hint]:text-muted">
       <h3>成本估算</h3>
       <p className="hint">关键帧与视频分开计价；返工率已计入关键帧成本。</p>
-      <div className="fields">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 [&_label]:mb-[7px] [&_label]:block [&_label]:text-xs [&_label]:tracking-[0.06em] [&_label]:text-muted [&_input]:w-full [&_input]:rounded-[10px] [&_input]:border [&_input]:border-white/15 [&_input]:bg-[#0b0b10] [&_input]:px-3 [&_input]:py-[10px] [&_input]:text-[15px] [&_input]:text-white [&_input]:outline-none [&_input]:transition [&_select]:w-full [&_select]:rounded-[10px] [&_select]:border [&_select]:border-white/15 [&_select]:bg-[#0b0b10] [&_select]:px-3 [&_select]:py-[10px] [&_select]:text-[15px] [&_select]:text-white [&_select]:outline-none [&_select]:transition [&_input:focus]:border-flame/60 [&_input:focus]:ring-[3px] [&_input:focus]:ring-flame/10 [&_select:focus]:border-flame/60 [&_select:focus]:ring-[3px] [&_select:focus]:ring-flame/10">
         <div className="field" style={{ gridColumn: "1 / -1" }}>
           <label htmlFor="cost-project">项目名</label>
           <input
@@ -118,29 +118,29 @@ export default function CostCalculator() {
           </div>
         ))}
       </div>
-      <div className="results">
-        <div className="res">
+      <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>单集成本</span>
           <b>
             {money(calc.perEp)}
             <i>元/集</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>全剧成本</span>
           <b>
             {money(calc.total)}
             <i>元/全剧</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>每分钟成片</span>
           <b>
             {money(calc.perMin)}
             <i>元/分钟</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>全剧成片时长</span>
           <b>
             {calc.hours.toFixed(1)}
@@ -148,29 +148,29 @@ export default function CostCalculator() {
           </b>
         </div>
       </div>
-      <div className="results" style={{ marginTop: 12 }}>
-        <div className="res">
+      <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4" style={{ marginTop: 12 }}>
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>关键帧成本 / 集</span>
           <b>
             {money(calc.frameCost)}
             <i>元/集</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>视频成本 / 集</span>
           <b>
             {money(calc.vidCost)}
             <i>元/集</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>关键帧占比</span>
           <b>
             {calc.share}
             <i>%</i>
           </b>
         </div>
-        <div className="res">
+        <div className="rounded-xl border border-line bg-white/[0.03] p-4 [&_span]:mb-1.5 [&_span]:block [&_span]:text-[11.5px] [&_span]:tracking-[0.04em] [&_span]:text-muted [&_b]:text-[22px] [&_b]:font-extrabold [&_b]:tabular-nums [&_b]:tracking-[-0.01em] [&_i]:ml-[3px] [&_i]:text-xs [&_i]:font-medium [&_i]:not-italic [&_i]:text-muted">
           <span>建议</span>
           <b style={{ fontSize: 13, fontWeight: 600, color: "var(--muted)" }}>
             超预算先砍 A 级镜头
@@ -188,7 +188,7 @@ export default function CostCalculator() {
         }}
       >
         <Link
-          className="btn btn-primary"
+          className="inline-flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-br from-[#e8544f] to-[#c3332f] px-[22px] py-3 text-[15px] font-semibold text-white shadow-[0_10px_26px_rgba(224,67,63,0.28)] transition hover:-translate-y-px hover:shadow-[0_14px_32px_rgba(224,67,63,0.36)]"
           href={
             "/quote?" +
             new URLSearchParams({ ...values, project }).toString()

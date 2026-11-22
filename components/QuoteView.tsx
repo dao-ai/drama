@@ -141,10 +141,10 @@ export default function QuoteView() {
       <SaveProject input={input} />
 
       <div className="q-actions">
-        <Link className="btn btn-ghost" href={"/storyboard?" + toQuery(input) + "#calc"}>
+        <Link className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]" href={"/storyboard?" + toQuery(input) + "#calc"}>
           调整参数
         </Link>
-        <button className="btn btn-ghost" onClick={downloadCsv}>
+        <button className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]" onClick={downloadCsv}>
           下载 CSV
         </button>
         <PrintButton />

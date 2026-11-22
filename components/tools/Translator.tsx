@@ -121,7 +121,7 @@ export default function Translator() {
   const delTerm = (i: number) => setTerms((prev) => prev.filter((_, idx) => idx !== i));
 
   return (
-    <div className="tool translator">
+    <div className="rounded-[20px] border border-white/15 bg-gradient-to-br from-[#17171f] to-[#0e0e14] p-[26px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:text-[19px] [&_.hint]:mb-[22px] [&_.hint]:mt-0 [&_.hint]:text-[13.5px] [&_.hint]:text-muted translator">
       <h3>字幕翻译工作台</h3>
       <p className="hint">
         导入 SRT → 逐行写译文 → 术语与时长自动检查 → 导出。译文保存在本机浏览器。
@@ -141,11 +141,11 @@ export default function Translator() {
             onChange={(e) => setRaw(e.target.value)}
           />
           <div className="tr-row">
-            <button className="btn btn-primary" onClick={() => doImport(raw)}>
+            <button className="inline-flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-br from-[#e8544f] to-[#c3332f] px-[22px] py-3 text-[15px] font-semibold text-white shadow-[0_10px_26px_rgba(224,67,63,0.28)] transition hover:-translate-y-px hover:shadow-[0_14px_32px_rgba(224,67,63,0.36)]" onClick={() => doImport(raw)}>
               解析并导入
             </button>
             <button
-              className="btn btn-ghost"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]"
               onClick={() => {
                 setRaw(SAMPLE);
                 doImport(SAMPLE);
@@ -249,19 +249,19 @@ export default function Translator() {
 
           <div className="tr-row" style={{ marginTop: 18 }}>
             <button
-              className="btn btn-primary"
+              className="inline-flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-br from-[#e8544f] to-[#c3332f] px-[22px] py-3 text-[15px] font-semibold text-white shadow-[0_10px_26px_rgba(224,67,63,0.28)] transition hover:-translate-y-px hover:shadow-[0_14px_32px_rgba(224,67,63,0.36)]"
               onClick={() => download("manju-bilingual.srt", formatSrt(cues, "bilingual"))}
             >
               导出双语 SRT
             </button>
             <button
-              className="btn btn-ghost"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]"
               onClick={() => download("manju-target.srt", formatSrt(cues, "target"))}
             >
               导出译文 SRT
             </button>
             <button
-              className="btn btn-ghost"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]"
               onClick={() => {
                 if (window.confirm("清空全部译文？源文和时轴保留。")) {
                   setCues((prev) => prev.map((c) => ({ ...c, tgt: "" })));
