@@ -49,7 +49,7 @@ npm run preview   # 用静态服务器跑 out/，4180
 
 ## 样式
 - Tailwind CSS v4（PostCSS 插件），设计 token 定义在 `app/globals.css` 的 `@theme` 里
-- 导航、页脚、学习资源卡片使用 utility class；长文排版、表格、工具面板等重复样式收在 `@layer components`，后续可按页逐步迁成 utility
+- 首页、导航、页脚、学习资源卡片已全部使用 utility class；长文排版、表格、工具面板等剩余样式收在 `@layer components`，按页逐步迁
 
 ## 结构
 
