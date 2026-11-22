@@ -24,6 +24,20 @@ npm run start   # 4180
 | `/visual` | 三层锁定法、锚点、三视图、提示词拼装器 |
 | `/storyboard` | A/B/C 镜头分级、动效菜单、成本计算器 |
 | `/checklist` | 36 项上线检查，localStorage 保存 |
+| `/quote` | 制作报价单：明细、合计、打印/PDF、下载 CSV（不在导航中） |
+| `/api/estimate` | GET/POST 成本估算，支持 `format=csv` 导出 |
+
+## 报价单与 API
+- 分镜页计算器底部「生成报价单」→ `/quote?frames=…&episodes=…`，参数直接进 URL，可分享/收藏
+- 报价页支持浏览器打印或存 PDF（A4 打印样式已处理），也提供 CSV 下载（带 BOM，Excel 直接打开）
+- API：
+  ```bash
+  curl "http://127.0.0.1:4180/api/estimate?frames=36&episodes=80"
+  curl -X POST -H 'content-type: application/json' -d '{"frames":40,"episodes":60}' \
+       http://127.0.0.1:4180/api/estimate
+  curl -OJ "http://127.0.0.1:4180/api/estimate?format=csv"
+  ```
+- 计价逻辑集中在 `lib/estimate.ts`，页面、API、CSV 共用一套计算，改单价只改一处
 
 ## 结构
 - `app/*/page.tsx` 六个路由，服务端组件，内容静态渲染

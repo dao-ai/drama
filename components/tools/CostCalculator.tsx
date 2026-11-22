@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 
 type Field = {
   key: string;
@@ -35,6 +36,23 @@ export default function CostCalculator() {
   const [values, setValues] = useState<Record<string, string>>(() =>
     Object.fromEntries(initial.map((f) => [f.key, f.value]))
   );
+  const [project, setProject] = useState("《退婚夜，我直播爆了豪门黑料》");
+
+  // 从报价单“调整参数”回来时回填
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    if (!sp.toString()) return;
+    setValues((prev) => {
+      const next = { ...prev };
+      initial.forEach((f) => {
+        const v = sp.get(f.key);
+        if (v !== null) next[f.key] = v;
+      });
+      return next;
+    });
+    const p = sp.get("project");
+    if (p) setProject(p);
+  }, []);
 
   const calc = useMemo(() => {
     const num = (k: string, d: number) => {
@@ -74,6 +92,15 @@ export default function CostCalculator() {
       <h3>成本估算</h3>
       <p className="hint">关键帧与视频分开计价；返工率已计入关键帧成本。</p>
       <div className="fields">
+        <div className="field" style={{ gridColumn: "1 / -1" }}>
+          <label htmlFor="cost-project">项目名</label>
+          <input
+            id="cost-project"
+            type="text"
+            value={project}
+            onChange={(e) => setProject(e.target.value)}
+          />
+        </div>
         {initial.map((f) => (
           <div className="field" key={f.key}>
             <label htmlFor={"cost-" + f.key}>{f.label}</label>
@@ -149,6 +176,26 @@ export default function CostCalculator() {
             超预算先砍 A 级镜头
           </b>
         </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          gap: 12,
+          marginTop: 20,
+          flexWrap: "wrap",
+        }}
+      >
+        <Link
+          className="btn btn-primary"
+          href={
+            "/quote?" +
+            new URLSearchParams({ ...values, project }).toString()
+          }
+        >
+          生成报价单 →
+        </Link>
       </div>
     </div>
   );
