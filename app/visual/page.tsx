@@ -92,50 +92,13 @@ export default function Page() {
     <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
       <div className="card"><h3>① 常态 / 假笑</h3><p>社交状态。用于铺垫、试探、装乖。眼睛不笑是关键。</p></div>
       <div className="card"><h3>② 冷脸 / 压迫</h3><p>掌控状态。用于反击、谈判、亮底牌。下巴微抬，眼神直视。</p></div>
-      <PromptBuilder />
+      <div className="card"><h3>③ 破防 / 失控</h3><p>情绪爆点。用于反转之后的后果拍。眼红、忍泪、表情裂开。</p></div>
     </div>
     <p>每档出一张半身参考，深灰背景、柔光。后面所有镜头从这三张里选最接近的做参考图，比每次文字描述稳得多。</p>
 
     <h2 id="promptgen">提示词生成器</h2>
     <p>选角色、选类型，直接生成带风格前缀的完整提示词。这就是「角色卡 + 前缀」的合体，改镜头内容时只改最后一段。</p>
-    <div className="tool" id="prompt-gen">
-      <h3>角色提示词拼装</h3>
-      <p className="hint">选择角色与用途，自动套用统一风格前缀与外貌锚点。</p>
-      <div className="fields">
-        <div className="field">
-          <label>角色</label>
-          <select id="pg-char">
-            <option value="sunian">苏念 · 女主</option>
-            <option value="luzhi">陆执 · 男主</option>
-            <option value="sumanman">苏曼曼 · 反派</option>
-            <option value="suguoqiang">苏国强 · 父亲</option>
-          </select>
-        </div>
-        <div className="field">
-          <label>用途</label>
-          <select id="pg-type">
-            <option value="turn">三视图（角色锁定）</option>
-            <option value="bust">半身表情（三档）</option>
-            <option value="scene">全身入戏（场景镜头）</option>
-          </select>
-        </div>
-        <div className="field">
-          <label>表情档（半身用）</label>
-          <select id="pg-expr"></select>
-        </div>
-      </div>
-      <div className="codebox" style={{ marginTop: "18px" }}>
-        <button className="copy">复制</button>
-        <pre><code id="pg-out"></code></pre>
-      </div>
-      <div style={{ display: "grid", gridTemplateColumns: "110px 1fr", gap: "14px", alignItems: "start" }}>
-        <div style={{ fontSize: "12px", color: "var(--dim)", letterSpacing: ".08em", paddingTop: "14px" }}>负向提示词</div>
-        <div className="codebox" style={{ marginTop: "8px" }}>
-          <button className="copy">复制</button>
-          <pre><code id="pg-neg"></code></pre>
-        </div>
-      </div>
-    </div>
+    <PromptBuilder />
 
     <h2 id="scene">场景底板：空镜复用</h2>
     <p>场景要出「空镜底板」，不带人。后续所有该场景的镜头，都是「底板 + 角色 + 换光」。这样宴会厅只画一次，就能用 20 集。</p>

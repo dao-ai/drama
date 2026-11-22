@@ -115,38 +115,21 @@ export default function Page() {
 
     <h2 id="record">生成记录与返工</h2>
     <p>每次生成记一行。这不是形式主义——它是你唯一能算出「单集真实成本」的数据来源。</p>
-    <CostCalculator />
+    <div className="tablewrap">
+      <table>
+        <thead><tr><th>镜号</th><th>模型</th><th>seed</th><th>参考图</th><th>耗时</th><th>费用</th><th>结果</th></tr></thead>
+        <tbody>
+          <tr><td className="num">E1-02</td><td>—</td><td className="num">184672</td><td>sunian_front_v3</td><td className="num">18s</td><td className="num">¥0.80</td><td>通过</td></tr>
+          <tr><td className="num">E1-03</td><td>—</td><td className="num">184672</td><td>sunian_front_v3</td><td className="num">22s</td><td className="num">¥0.80</td><td>返工：手部</td></tr>
+          <tr><td className="num">E1-03r</td><td>—</td><td className="num">184672</td><td>sunian_front_v3</td><td className="num">19s</td><td className="num">¥0.80</td><td>通过</td></tr>
+        </tbody>
+      </table>
+    </div>
     <p>返工率按 <strong>20–40%</strong> 预留。如果连续几集返工率低于 10%，多半不是技术变好了，是你在放低验收标准。</p>
 
     <h2 id="calc">单集成本计算器</h2>
     <p>把供应商报价填进去，得到单集与全剧成本。默认值是占位示例，<strong>拿到真实报价后必须替换</strong>。</p>
-    <div className="tool" id="cost-calc">
-      <h3>成本估算</h3>
-      <p className="hint">关键帧与视频分开计价；返工率已计入关键帧成本。</p>
-      <div className="fields">
-        <div className="field"><label>单集镜头数</label><input id="frames" type="number" min="1" value="36" /></div>
-        <div className="field"><label>关键帧单价（元/张）</label><input id="framePrice" type="number" min="0" step="0.1" value="0.8" /></div>
-        <div className="field"><label>返工率（%）</label><input id="rework" type="number" min="0" max="200" value="30" /></div>
-        <div className="field"><label>视频段数 / 集</label><input id="vidSegs" type="number" min="0" value="9" /></div>
-        <div className="field"><label>平均段长（秒）</label><input id="vidSec" type="number" min="0" step="0.5" value="4" /></div>
-        <div className="field"><label>视频单价（元/秒）</label><input id="vidPrice" type="number" min="0" step="0.1" value="2.5" /></div>
-        <div className="field"><label>集数</label><input id="episodes" type="number" min="1" value="80" /></div>
-        <div className="field"><label>单集时长（秒）</label><input id="epLen" type="number" min="10" value="110" /></div>
-        <div className="field"><label>配音/剪辑等（元/集）</label><input id="audio" type="number" min="0" value="40" /></div>
-      </div>
-      <div className="results">
-        <div className="res"><span>单集成本</span><b id="out-per">—</b></div>
-        <div className="res"><span>全剧成本</span><b id="out-all">—</b></div>
-        <div className="res"><span>每分钟成片</span><b id="out-min">—</b></div>
-        <div className="res"><span>全剧成片时长</span><b id="out-hours">—</b></div>
-      </div>
-      <div className="results" style={{ marginTop: "12px" }}>
-        <div className="res"><span>关键帧成本 / 集</span><b id="out-frame">—</b></div>
-        <div className="res"><span>视频成本 / 集</span><b id="out-video">—</b></div>
-        <div className="res"><span>关键帧占比</span><b id="out-share">—</b></div>
-        <div className="res"><span>建议</span><b style={{ fontSize: "13px", fontWeight: "600", color: "var(--muted)" }}>超预算先砍 A 级镜头</b></div>
-      </div>
-    </div>
+    <CostCalculator />
     <p style={{ marginTop: "14px", color: "var(--dim)", fontSize: "13px" }}>注意：此计算不含投流、剧本人力与平台分成。投流通常按流水分成另算，别混进制作成本里自我安慰。</p>
 
     <h2 id="fps">导出规格</h2>

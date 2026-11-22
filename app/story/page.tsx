@@ -48,24 +48,24 @@ export default function Page() {
 
     <h2 id="sixbeats">单集六拍</h2>
     <p>这是经过验证的默认结构，90% 的集都可以套。熟练之后再打破它。</p>
-    <BeatPlanner />
+    <div className="tablewrap">
+      <table>
+        <thead><tr><th>拍</th><th>占比</th><th>功能</th><th>写法要点</th></tr></thead>
+        <tbody>
+          <tr><td>冷开场</td><td className="num">4%</td><td>冲突或异常，3 秒内成立</td><td>不要交代背景，直接给一个「不对劲」的画面或一句威胁</td></tr>
+          <tr><td>铺垫</td><td className="num">20%</td><td>交代关系、目标、代价</td><td>每句台词都要带信息，删掉寒暄</td></tr>
+          <tr><td>冲突升级</td><td className="num">28%</td><td>施压、反抗、再加码</td><td>正反打，压迫方每次多给一个筹码</td></tr>
+          <tr><td>反转</td><td className="num">24%</td><td>信息揭露，攻守易位</td><td>静音一拍再爆，让观众先愣一下</td></tr>
+          <tr><td>后果</td><td className="num">15%</td><td>反应镜头，情绪落地</td><td>给配角反应，比主角自己说更有效</td></tr>
+          <tr><td>结尾扣</td><td className="num">9%</td><td>指向下一集的具体事件</td><td>新威胁/新身份/新证据，三者选一</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2 id="beatcalc">节拍时间码生成器</h2>
     <p>输入你这一集的时长，直接得到可用的时间码表。写分镜时按这个切，比凭感觉靠谱。</p>
-    <div className="tool" id="beat-calc">
-      <h3>单集节拍分配</h3>
-      <p className="hint">按六拍比例自动计算时间码，末端自动对齐总时长。</p>
-      <div className="fields" style={{ gridTemplateColumns: "220px 1fr" }}>
-        <div className="field">
-          <label>单集时长（秒）</label>
-          <input id="beat-dur" type="number" min="30" max="300" step="1" value="110" />
-        </div>
-        <div className="field" style={{ alignSelf: "end", paddingBottom: "10px" }}>
-          <span id="beat-info" style={{ color: "var(--muted)", fontSize: "13.5px" }}></span>
-        </div>
-      </div>
-      <div className="beats" id="beat-out"></div>
-    </div>
+    <BeatPlanner />
+    <p style={{ marginTop: "16px", color: "var(--dim)", fontSize: "13px" }}>金色条 = 必须留钩子的位置。结尾扣的时长可以压缩到 2 秒，但绝不能没有。</p>
 
     <h2 id="first3">前三集法则</h2>
     <p>平台给每部剧的流量窗口非常短。前三集决定它能不能进入推荐池，所以这三集的任务是固定的：</p>

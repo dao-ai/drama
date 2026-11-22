@@ -87,9 +87,7 @@ export default function BeatPlanner() {
           </div>
         </div>
       </div>
-      <p style={{ marginTop: 16, color: "var(--dim)", fontSize: 13 }}>
-        金色条 = 必须留钩子的位置。结尾扣的时长可以压缩到 2 秒，但绝不能没有。
-      </p>
+
     </>
   );
 }
