@@ -107,7 +107,7 @@ const OVERSEAS: Item[] = [
 function Group({ title, kicker, items }: { title: string; kicker: string; items: Item[] }) {
   return (
     <section style={{ padding: "0 0 8px" }}>
-      <div className="kicker" style={{ marginBottom: 10 }}>{kicker} · {title}</div>
+      <div className="mb-2.5 text-xs font-bold uppercase tracking-[0.2em] text-flame" style={{ marginBottom: 10 }}>{kicker} · {title}</div>
       <div className="mb-6 grid gap-3.5 sm:grid-cols-2">
         {items.map((it) => (
           <a
@@ -183,7 +183,7 @@ export default function ResourcesPage() {
         <Group title="体系和资源更深" kicker="English" items={OVERSEAS} />
 
         <h2 id="filter">四条筛选手册</h2>
-        <div className="grid grid-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>① 看有没有验收标准</h3>
             <p>只说「这样效果更好」的是经验；说「过不了就退回哪一步」的才是流程。</p>

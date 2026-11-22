@@ -40,7 +40,7 @@ export default function Page() {
     </div>
 
     <h2 id="layers">三层结构：全剧、单元、单集</h2>
-    <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 24px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>全剧</h3><p>一条主线悬念贯穿到底（旧案、身世、复仇目标）。每 10 集给一次大反转，每 20 集换一次赌注。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>单元（3 集）</h3><p>三集一个完整循环：起（新麻烦）→ 承（升级）→ 转（打脸/反转）。第 3 集结尾抛下一个循环的引子。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>单集</h3><p>六拍结构，自成一个情绪闭环，但结尾必须留扣。单集可以独立被刷到，所以开头不能依赖上一集。</p></div>
@@ -87,7 +87,7 @@ export default function Page() {
 
     <h2 id="hooks">钩子类型清单</h2>
     <p>结尾扣不要每次都一样。下面八种轮着用，观众才不会疲劳：</p>
-    <div className="grid grid-2" style={{ margin: "16px 0 24px" }}>
+    <div className="grid gap-4 sm:grid-cols-2" style={{ margin: "16px 0 24px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 新威胁</h3><p>「那就让她，跟她爸妈一样。」——反派升级手段，直接指向下一集的危险。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 新身份</h3><p>主角亮出隐藏身份或新账号，观众想看这个身份怎么用。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 新证据</h3><p>U 盘、录音、档案袋。物件本身要能被画面拍到，别只靠台词说。</p></div>
@@ -131,7 +131,7 @@ export default function Page() {
     </div>
 
     <h2 id="traps">四种废稿模式</h2>
-    <div className="grid grid-2">
+    <div className="grid gap-4 sm:grid-cols-2">
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 前情提要式开场</h3><p>用 20 秒交代「她本是豪门千金」。观众不是来看说明书的，直接把她扔进冲突里。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 情绪没有出口</h3><p>主角一直受气，到结尾还没还手。爽剧可以延迟满足，但不能整集都是憋屈。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 反派降智</h3><p>为了让主角赢，反派突然犯低级错误。反派的每一步都该有合理动机，主角赢在信息差，不是对手蠢。</p></div>

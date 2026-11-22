@@ -11,16 +11,16 @@ export default function SaveProject({ input }: { input: EstimateInput }) {
 
   if (state === "done") {
     return (
-      <div className="save-done">
+      <div className="mx-auto mt-[18px] max-w-[900px] text-right text-sm text-teal [&_a]:text-gold">
         已保存到本机报价库 · <Link href="/projects">查看 / 对比 →</Link>
       </div>
     );
   }
 
   return (
-    <div className="save-row">
+    <div className="mx-auto mt-[18px] flex max-w-[900px] flex-wrap items-center justify-end gap-2.5">
       <input
-        className="save-name"
+        className="w-[300px] max-w-full rounded-[10px] border border-white/15 bg-[#0b0b10] px-3 py-2.5 text-sm text-white outline-none transition focus:border-flame/60 focus:ring-[3px] focus:ring-flame/10"
         value={name}
         maxLength={60}
         aria-label="方案名称"

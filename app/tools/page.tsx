@@ -55,7 +55,7 @@ export default function ToolsPage() {
         </div>
 
         <h2 id="rule">三条选型原则</h2>
-        <div className="grid grid-3" style={{ margin: "18px 0 26px" }}>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 26px" }}>
           <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <div className="ico">🎯</div>
             <h3>先定环节，再定模型</h3>
@@ -362,7 +362,7 @@ export default function ToolsPage() {
         </div>
 
         <h2 id="trap">四个选型陷阱</h2>
-        <div className="grid grid-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
             <h3>① 用榜单代替测试</h3>
             <p>榜单测的是通用审美，不是你的角色。你的女主在 A 模型上可能比榜一更稳。</p>

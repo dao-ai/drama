@@ -44,7 +44,7 @@ export default function Page() {
 
     <h2 id="level">A/B/C 镜头分级</h2>
     <p>全部生成视频，成本会翻三倍；全部用静帧，观众会觉得是 PPT。正确的做法是分级。</p>
-    <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 24px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="inline-block rounded-full border border-flame/35 bg-flame/10 px-2.5 py-[2px] text-[11px] text-[#ff8a80]">A 级</span></div>
         <h3>必须视频</h3>

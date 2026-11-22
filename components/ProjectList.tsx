@@ -135,7 +135,7 @@ export default function ProjectList({
                   >
                     打开
                   </Link>
-                  <button onClick={() => remove(p.id)} className="linkbtn">
+                  <button onClick={() => remove(p.id)} className="text-[13px] text-dim underline underline-offset-[3px] transition hover:text-[#ff8a80] disabled:opacity-50">
                     删除
                   </button>
                 </td>
@@ -183,7 +183,7 @@ export default function ProjectList({
                         {delta && (
                           <span
                             className={
-                              "delta " + (delta.startsWith("+") ? "up" : "down")
+                              "ml-2 text-[11.5px] tabular-nums " + (delta.startsWith("+") ? "text-[#ff8a80]" : "text-teal")
                             }
                           >
                             {delta}

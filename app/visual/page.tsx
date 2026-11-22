@@ -32,7 +32,7 @@ export default function Page() {
     <p>所以一致性不能靠描述，要靠<strong>约束</strong>：同一段固定文本 + 同一张参考图 + 同一个种子。三者缺一，就会漂移。</p>
 
     <h2 id="three">三层锁定法</h2>
-    <div className="grid grid-3" style={{ margin: "18px 0 26px" }}>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 26px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div className="ico">🎨</div>
         <h3>第一层：风格前缀</h3>
@@ -89,7 +89,7 @@ export default function Page() {
 
     <h2 id="expressions">表情三档：够用就好</h2>
     <p>不需要做表情包全集。三个档位覆盖 80% 的剧情：</p>
-    <div className="grid grid-3" style={{ margin: "18px 0 24px" }}>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 24px" }}>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 常态 / 假笑</h3><p>社交状态。用于铺垫、试探、装乖。眼睛不笑是关键。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 冷脸 / 压迫</h3><p>掌控状态。用于反击、谈判、亮底牌。下巴微抬，眼神直视。</p></div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 破防 / 失控</h3><p>情绪爆点。用于反转之后的后果拍。眼红、忍泪、表情裂开。</p></div>
