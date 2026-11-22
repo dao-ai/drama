@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CodeBox from "@/components/CodeBox";
 import PromptBuilder from "@/components/tools/PromptBuilder";
 
 export const metadata: Metadata = {
@@ -50,10 +51,9 @@ export default function Page() {
     </div>
 
     <h3>统一风格前缀（直接复制）</h3>
-    <div className="codebox">
-      <button className="copy">复制</button>
-      <pre><code>vertical 9:16 cinematic keyframe, semi-realistic Chinese urban drama animation, glossy skin, detailed fabric, volumetric light, shallow depth of field, subtle film grain</code></pre>
-    </div>
+    <CodeBox>
+<pre><code>vertical 9:16 cinematic keyframe, semi-realistic Chinese urban drama animation, glossy skin, detailed fabric, volumetric light, shallow depth of field, subtle film grain</code></pre>
+</CodeBox>
     <p>这段前缀决定了「看起来像同一部剧」。换画风就整体换，不要一集换一个。前缀之后才是镜头内容，顺序是：<code>风格 → 景别 → 角色 → 动作 → 场景 → 光线 → 情绪</code>。</p>
 
     <h2 id="anchor">锚点设计</h2>
@@ -102,10 +102,9 @@ export default function Page() {
 
     <h2 id="scene">场景底板：空镜复用</h2>
     <p>场景要出「空镜底板」，不带人。后续所有该场景的镜头，都是「底板 + 角色 + 换光」。这样宴会厅只画一次，就能用 20 集。</p>
-    <div className="codebox">
-      <button className="copy">复制</button>
-      <pre><code>grand hotel banquet hall with crystal chandeliers, round tables with white linens, warm gold ambient light, empty hall before guests arrive, flower-decorated stage, red carpet aisle, symmetrical vertical composition</code></pre>
-    </div>
+    <CodeBox>
+<pre><code>grand hotel banquet hall with crystal chandeliers, round tables with white linens, warm gold ambient light, empty hall before guests arrive, flower-decorated stage, red carpet aisle, symmetrical vertical composition</code></pre>
+</CodeBox>
     <p>同一底板上做变体，比重新生成便宜得多：</p>
     <ul>
       <li><strong>满座版</strong>：加 <code>crowd of well-dressed guests seated at round tables, photographers near the aisle</code></li>
@@ -119,10 +118,9 @@ export default function Page() {
 
     <h2 id="negative">负向提示词</h2>
     <p>负向提示词是护栏，不是装饰。每次生成都带上，尤其是人物特写。</p>
-    <div className="codebox">
-      <button className="copy">复制</button>
-      <pre><code>extra fingers, deformed hands, text artifacts, watermark, duplicate face, plastic skin, overexposed, wide-angle distortion</code></pre>
-    </div>
+    <CodeBox>
+<pre><code>extra fingers, deformed hands, text artifacts, watermark, duplicate face, plastic skin, overexposed, wide-angle distortion</code></pre>
+</CodeBox>
     <p>按项目追加：古装加 <code>modern clothing, zipper, wristwatch</code>；群像加 <code>cloned faces, identical twins, merged bodies</code>。</p>
 
     <h2 id="fail">六种典型翻车</h2>

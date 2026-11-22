@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import CodeBox from "@/components/CodeBox";
 
 const STYLE =
   "vertical 9:16 cinematic keyframe, semi-realistic Chinese urban drama animation, glossy skin, detailed fabric, volumetric light, shallow depth of field, subtle film grain";
@@ -59,27 +60,6 @@ const CHARS: Character[] = [
 
 const EXPR_LABEL = ["假笑 / 常态", "冷脸 / 压迫", "破防 / 失控"];
 
-function useCopy() {
-  const [copied, setCopied] = useState(false);
-  const copy = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-    }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1600);
-  };
-  return { copied, copy };
-}
-
 export default function PromptBuilder() {
   const [charId, setCharId] = useState(CHARS[0].id);
   const [type, setType] = useState("turn");
@@ -109,8 +89,6 @@ export default function PromptBuilder() {
     return STYLE + ",\n" + body;
   }, [char, type, exprIndex]);
 
-  const main = useCopy();
-  const neg = useCopy();
 
   return (
     <div className="tool">
@@ -160,14 +138,11 @@ export default function PromptBuilder() {
           </select>
         </div>
       </div>
-      <div className="codebox" style={{ marginTop: 18 }}>
-        <button className="copy" onClick={() => main.copy(prompt)}>
-          {main.copied ? "已复制 ✓" : "复制"}
-        </button>
-        <pre>
+      <CodeBox className="mt-[18px]">
+<pre>
           <code>{prompt}</code>
         </pre>
-      </div>
+      </CodeBox>
       <div
         style={{
           display: "grid",
@@ -186,14 +161,11 @@ export default function PromptBuilder() {
         >
           负向提示词
         </div>
-        <div className="codebox" style={{ marginTop: 8 }}>
-          <button className="copy" onClick={() => neg.copy(NEG)}>
-            {neg.copied ? "已复制 ✓" : "复制"}
-          </button>
-          <pre>
+        <CodeBox className="mt-2">
+<pre>
             <code>{NEG}</code>
           </pre>
-        </div>
+          </CodeBox>
       </div>
     </div>
   );

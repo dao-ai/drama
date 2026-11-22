@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CodeBox from "@/components/CodeBox";
 import BeatPlanner from "@/components/tools/BeatPlanner";
 
 export const metadata: Metadata = {
@@ -104,14 +105,13 @@ export default function Page() {
       <li><strong>少用旁白</strong>：能用画面交代的，绝不用旁白。旁白只用于时间跳跃和内心反差。</li>
       <li><strong>留一句能截图的</strong>：每集至少一句「金句」，能被观众截图发出去。这句通常放在反转或结尾扣。</li>
     </ol>
-    <div className="codebox">
-      <button className="copy">复制</button>
-      <pre><code>❌ 书面：她心中五味杂陈，想起了六年前那场改变一切的车祸。
+    <CodeBox>
+<pre><code>❌ 书面：她心中五味杂陈，想起了六年前那场改变一切的车祸。
 ✅ 口语：六年了。你们连一句真话都不肯给我。
 
 ❌ 过长：你以为你今天站在这里说这些话就能改变什么吗？
 ✅ 拆句：你以为站在这儿说两句，就能翻盘？</code></pre>
-    </div>
+</CodeBox>
 
     <h2 id="check">信息点检查表</h2>
     <p>每集写完，用这张表过一遍。任何一项打不了勾，都别进分镜。</p>

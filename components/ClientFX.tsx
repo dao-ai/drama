@@ -60,52 +60,13 @@ export default function ClientFX() {
       });
     }
 
-    const onClick = (ev: MouseEvent) => {
-      const target = ev.target as HTMLElement;
-      const btn = target.closest(".copy") as HTMLButtonElement | null;
-      if (btn) {
-        const box = btn.closest(".codebox");
-        const code = box?.querySelector("code, pre");
-        if (!code) return;
-        const text = (code as HTMLElement).innerText;
-        const done = () => {
-          const old = btn.textContent;
-          btn.textContent = "已复制 ✓";
-          btn.classList.add("ok");
-          window.setTimeout(() => {
-            btn.textContent = old;
-            btn.classList.remove("ok");
-          }, 1600);
-        };
-        if (navigator.clipboard?.writeText) {
-          navigator.clipboard.writeText(text).then(done, () => fallback(text, done));
-        } else fallback(text, done);
-      }
-
-    };
-    document.addEventListener("click", onClick);
 
     return () => {
       window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("click", onClick);
       io?.disconnect();
       io2?.disconnect();
     };
   }, []);
 
   return null;
-}
-
-function fallback(text: string, cb: () => void) {
-  const ta = document.createElement("textarea");
-  ta.value = text;
-  ta.style.position = "fixed";
-  ta.style.opacity = "0";
-  document.body.appendChild(ta);
-  ta.select();
-  try {
-    document.execCommand("copy");
-    cb();
-  } catch {}
-  document.body.removeChild(ta);
 }
