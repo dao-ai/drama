@@ -392,6 +392,7 @@ footer .wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-con
   .topbar,footer,.progress,.q-actions{display:none !important}
   .quote-wrap{padding:0}
   .quote{box-shadow:none;border-radius:0;padding:0;max-width:none}
-  @page{size:A4;margin:16mm}
 }
 
+
+@page{size:A4;margin:16mm}
