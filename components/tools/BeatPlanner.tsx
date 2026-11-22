@@ -59,31 +59,35 @@ export default function BeatPlanner() {
             </span>
           </div>
         </div>
-        <div className="beats">
+        <div className="mt-5 flex flex-col">
           {rows.map((r) => (
-            <div className={"beat" + (r.hot ? " hot" : "")} key={r.name}>
-              <div className="tc">
+            <div className="grid grid-cols-[70px_1fr] items-center gap-x-2.5 gap-y-1 border-b border-white/5 py-2.5 text-[13px] last:border-0 sm:grid-cols-[84px_92px_120px_1fr] sm:gap-3.5 sm:text-sm" key={r.name}>
+              <div className="whitespace-nowrap text-[13px] font-bold tabular-nums text-gold">
                 {fmt(r.start)}–{fmt(r.end)}
               </div>
-              <div className="nm">{r.name}</div>
-              <span className="track">
-                <i style={{ width: Math.round(r.p * 100) + "%" }} />
+              <div className="whitespace-nowrap text-[12.5px] text-muted">{r.name}</div>
+              <span className="hidden h-2 overflow-hidden rounded-md bg-white/[0.06] sm:block">
+                <i
+                  className={"block h-full rounded-md " + (r.hot ? "bg-gradient-to-r from-gold to-[#ffd98a]" : "bg-gradient-to-r from-flame to-[#ff8a80]")}
+                  style={{ width: Math.round(r.p * 100) + "%" }}
+                />
               </span>
-              <div className="desc">{r.desc}</div>
+              <div className="col-start-2 text-[11.5px] leading-[1.55] text-dim sm:col-start-auto">{r.desc}</div>
             </div>
           ))}
-          <div className="beat">
-            <div className="tc">{fmt(total)}</div>
-            <div className="nm">总时长</div>
-            <span className="track">
+          <div className="grid grid-cols-[70px_1fr] items-center gap-x-2.5 gap-y-1 border-b border-white/5 py-2.5 text-[13px] last:border-0 sm:grid-cols-[84px_92px_120px_1fr] sm:gap-3.5 sm:text-sm">
+            <div className="whitespace-nowrap text-[13px] font-bold tabular-nums text-gold">{fmt(total)}</div>
+            <div className="whitespace-nowrap text-[12.5px] text-muted">总时长</div>
+            <span className="hidden h-2 overflow-hidden rounded-md bg-white/[0.06] sm:block">
               <i
+                className="block h-full rounded-md"
                 style={{
                   width: "100%",
                   background: "linear-gradient(90deg,#4fd1c5,#d9a441)",
                 }}
               />
             </span>
-            <div className="desc">约 {Math.round(total / 18)} 次信息增量</div>
+            <div className="col-start-2 text-[11.5px] leading-[1.55] text-dim sm:col-start-auto">约 {Math.round(total / 18)} 次信息增量</div>
           </div>
         </div>
       </div>
