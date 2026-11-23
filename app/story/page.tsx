@@ -17,6 +17,7 @@ export default function Page() {
     <a href="#layers" className="block py-1.5 text-muted transition hover:text-mist ">三层结构</a>
     <a href="#sixbeats" className="block py-1.5 text-muted transition hover:text-mist ">单集六拍</a>
     <a href="#beatcalc" className="block py-1.5 text-muted transition hover:text-mist ">节拍时间码生成器</a>
+    <a href="#beattable" className="block py-1.5 text-muted transition hover:text-mist ">节拍表模板</a>
     <a href="#genre" className="block py-1.5 text-muted transition hover:text-mist ">题材赛道定位</a>
     <a href="#first3" className="block py-1.5 text-muted transition hover:text-mist ">前三集法则</a>
     <a href="#hooks" className="block py-1.5 text-muted transition hover:text-mist ">钩子类型清单</a>
@@ -94,6 +95,28 @@ export default function Page() {
     <p>输入你这一集的时长，直接得到可用的时间码表。写分镜时按这个切，比凭感觉靠谱。</p>
     <BeatPlanner />
     <p style={{ marginTop: "16px", color: "var(--dim)", fontSize: "13px" }}>金色条 = 必须留钩子的位置。结尾扣的时长可以压缩到 2 秒，但绝不能没有。</p>
+
+    <h2 id="beattable">节拍表模板</h2>
+    <p>时间码定下来后，用这张表把每一拍的画面、台词、音效和钩子填出来。它是剧本到分镜之间的底稿，一行一拍，空着的格子就是还没想清楚的地方。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[640px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>时间码</th><th>功能</th><th>画面 / 景别</th><th>台词 / 旁白</th><th>音效 / BGM</th><th>钩子</th></tr></thead>
+        <tbody>
+          <tr><td className="num">0:00–0:03</td><td>冷开场</td><td>特写</td><td>一句冲突台词</td><td>重音效</td><td>是</td></tr>
+          <tr><td className="num">0:03–0:15</td><td>铺垫</td><td>中景</td><td>交代关系</td><td>低铺底</td><td>否</td></tr>
+          <tr><td className="num">0:15–0:35</td><td>冲突升级</td><td>正反打</td><td>对抗台词</td><td>节奏加快</td><td>小钩子</td></tr>
+          <tr><td className="num">0:35–0:55</td><td>反转</td><td>推镜</td><td>信息揭露</td><td>静音一拍</td><td>是</td></tr>
+          <tr><td className="num">0:55–1:10</td><td>后果</td><td>全景</td><td>反应</td><td>情绪音乐</td><td>否</td></tr>
+          <tr><td className="num">1:10–1:20</td><td>结尾扣</td><td>特写</td><td>悬念台词</td><td>戛然而止</td><td>强钩子</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>前 3 秒是否有冲突或异常？</li>
+      <li>每 15–20 秒是否有一次信息增量？</li>
+      <li>结尾扣是否指向下一集的具体事件？</li>
+      <li>单集镜头数是否在预算内（常见 25–45 镜）？</li>
+    </ul>
 
     <h2 id="genre">题材赛道定位</h2>
     <p>先选赛道再写本子。把核心爽点和主角配置对齐，再判断你的题材能不能套进去。</p>
