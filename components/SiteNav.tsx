@@ -2,18 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { NAV_PRIMARY, type NavItem } from "@/lib/nav";
 
-const items = [
-  { href: "/", label: "首页" },
-  { href: "/workflow", label: "全流程" },
-  { href: "/story", label: "剧本" },
-  { href: "/visual", label: "视觉 / 提示词" },
-  { href: "/storyboard", label: "分镜 / 成本" },
-  { href: "/tools", label: "工具选型" },
-  { href: "/resources", label: "学习资源" },
-  { href: "/projects", label: "报价库" },
-  { href: "/checklist", label: "上线清单" },
-];
+const items: NavItem[] = NAV_PRIMARY;
 
 export default function SiteNav() {
   const pathname = usePathname();
