@@ -6,16 +6,21 @@ export function Stage({
   no,
   title,
   meta,
+  anchor,
   children,
 }: {
   no: string;
   title: string;
   meta: string;
+  anchor?: string;
   children: ReactNode;
 }) {
   const [open, setOpen] = useState(true);
   return (
-    <div className="my-4 overflow-hidden rounded-2xl border border-line bg-panel">
+    <div
+      id={anchor}
+      className="my-4 scroll-mt-[88px] overflow-hidden rounded-2xl border border-line bg-panel"
+    >
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}

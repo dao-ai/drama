@@ -43,7 +43,7 @@ npm run preview   # 用静态服务器跑 out/，4180
 
 全站无后端：
 
-- 检查表、报价库、翻译工作台草稿都存在浏览器 `localStorage`
+- 检查表、报价库草稿都存在浏览器 `localStorage`
 - 报价单参数走 URL，可分享、可刷新
 - 换设备或清缓存会丢数据；需要多端同步再接后端
 
@@ -65,7 +65,6 @@ npm run preview   # 用静态服务器跑 out/，4180
 - `components/` SiteNav、QuoteView、ProjectList、ProjectsClient、ClientFX 等
 - `lib/estimate.ts` 计价模型（页面、CSV 共用）
 - `lib/local-projects.ts` 报价库本地存储
-- `lib/srt.ts` 字幕解析与检查（翻译工作台预留，尚未接入页面）
 - `app/globals.css` 全站样式与 A4 打印样式
 
 ## 内容来源

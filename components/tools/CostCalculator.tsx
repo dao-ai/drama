@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { parseInput } from "@/lib/estimate";
+import { estimate, parseInput } from "@/lib/estimate";
 import QuoteModal from "@/components/QuoteModal";
 
 type Field = {
@@ -56,38 +56,23 @@ export default function CostCalculator() {
     if (p) setProject(p);
   }, []);
 
+  const input = useMemo(
+    () => parseInput({ ...values, project }),
+    [values, project]
+  );
+
   const calc = useMemo(() => {
-    const num = (k: string, d: number) => {
-      const v = parseFloat(values[k] ?? "");
-      return Number.isFinite(v) && v >= 0 ? v : d;
-    };
-    const frames = num("frames", 36);
-    const fp = num("framePrice", 0.8);
-    const rw = num("rework", 30) / 100;
-    const segs = num("vidSegs", 9);
-    const sec = num("vidSec", 4);
-    const vp = num("vidPrice", 2.5);
-    const eps = num("episodes", 80);
-    const len = num("epLen", 110);
-    const audio = num("audio", 40);
-
-    const frameCost = frames * (1 + rw) * fp;
-    const vidCost = segs * sec * vp;
-    const perEp = frameCost + vidCost + audio;
-    const total = perEp * eps;
-    const minutes = (len * eps) / 60;
-    const share = perEp > 0 ? Math.round((frameCost / perEp) * 100) : 0;
-
+    const r = estimate(input);
     return {
-      perEp,
-      total,
-      perMin: total / Math.max(minutes, 0.01),
-      hours: minutes / 60,
-      frameCost,
-      vidCost,
-      share,
+      perEp: r.perEp,
+      total: r.total,
+      perMin: r.perMinute,
+      hours: r.hours,
+      frameCost: r.lines[0]?.amount ?? 0,
+      vidCost: r.lines[1]?.amount ?? 0,
+      share: Math.round(r.frameShare),
     };
-  }, [values]);
+  }, [input]);
 
   return (
     <div className="rounded-[20px] border border-white/15 bg-gradient-to-br from-[#17171f] to-[#0e0e14] p-[26px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:text-[19px] [&_.hint]:mb-[22px] [&_.hint]:mt-0 [&_.hint]:text-[13.5px] [&_.hint]:text-muted">
@@ -199,7 +184,7 @@ export default function CostCalculator() {
 
       {quoteOpen && (
         <QuoteModal
-          input={parseInput({ ...values, project })}
+          input={input}
           onClose={() => setQuoteOpen(false)}
         />
       )}
