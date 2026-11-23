@@ -145,7 +145,7 @@ export default function Checklist() {
           {count} / {total} 项完成
         </b>
         <button
-          className="rounded-lg border border-white/15 px-3.5 py-1.5 text-[13px] text-mist transition hover:bg-white/5"
+          className="rounded-lg border border-white/15 bg-transparent px-3.5 py-1.5 text-[13px] text-mist transition hover:bg-white/5"
           onClick={() => setDone({})}
         >
           重置

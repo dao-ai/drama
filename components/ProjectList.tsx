@@ -133,11 +133,11 @@ export default function ProjectList({
                 <td style={{ whiteSpace: "nowrap", textAlign: "right" }}>
                   <button
                     onClick={() => setPreview(p)}
-                    className="mr-3 text-[13px] text-gold transition hover:text-[#ffd98a]"
+                    className="mr-3 border border-transparent bg-transparent text-[13px] text-gold transition hover:text-[#ffd98a]"
                   >
                     打开
                   </button>
-                  <button onClick={() => remove(p.id)} className="text-[13px] text-dim underline underline-offset-[3px] transition hover:text-[#ff8a80] disabled:opacity-50">
+                  <button onClick={() => remove(p.id)} className="border border-transparent bg-transparent text-[13px] text-dim underline underline-offset-[3px] transition hover:text-[#ff8a80] disabled:opacity-50">
                     删除
                   </button>
                 </td>

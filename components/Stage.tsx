@@ -24,7 +24,7 @@ export function Stage({
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center gap-3.5 bg-gradient-to-r from-flame/10 to-transparent px-[22px] py-[18px] text-left"
+        className="flex w-full items-center gap-3.5 border border-transparent bg-transparent bg-gradient-to-r from-flame/10 to-transparent px-[22px] py-[18px] text-left"
       >
         <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-flame/15 text-[13px] font-extrabold text-[#ff8a80]">
           {no}
