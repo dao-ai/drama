@@ -13,9 +13,11 @@ export default function Page() {
   <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
     <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
     <a href="#unit" className="block py-1.5 text-muted transition hover:text-mist ">单集是基本单位</a>
+    <a href="#pipeline" className="block py-1.5 text-muted transition hover:text-mist ">剧本产出链路</a>
     <a href="#layers" className="block py-1.5 text-muted transition hover:text-mist ">三层结构</a>
     <a href="#sixbeats" className="block py-1.5 text-muted transition hover:text-mist ">单集六拍</a>
     <a href="#beatcalc" className="block py-1.5 text-muted transition hover:text-mist ">节拍时间码生成器</a>
+    <a href="#genre" className="block py-1.5 text-muted transition hover:text-mist ">题材赛道定位</a>
     <a href="#first3" className="block py-1.5 text-muted transition hover:text-mist ">前三集法则</a>
     <a href="#hooks" className="block py-1.5 text-muted transition hover:text-mist ">钩子类型清单</a>
     <a href="#dialogue" className="block py-1.5 text-muted transition hover:text-mist ">台词四条规则</a>
@@ -37,6 +39,30 @@ export default function Page() {
     <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
       <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">写之前先问</span>
       这一集，观众<b>必须知道</b>的三件事是什么？如果超过三件，拆集；如果少于一件，这集可以删。
+    </div>
+
+    <h2 id="pipeline">剧本产出链路</h2>
+    <p>从一句话到可拍剧本分四步，上一步没过关卡，不进下一步。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>步骤</th><th>产出物</th><th>关卡</th></tr></thead>
+        <tbody>
+          <tr><td><b>① 一句话梗概</b><br/>logline</td><td>谁 + 处境 + 目标 + 长线悬念</td><td>不看剧名也能听懂，能让人追问「然后呢」</td></tr>
+          <tr><td><b>② 人物小传</b></td><td>主角目标 / 性格 / 软肋 / 小动作；对手动机与筹码；辅助功能；关系网；秘密表</td><td>每个主要角色都有想要的东西和阻碍；秘密能逐集解锁</td></tr>
+          <tr><td><b>③ 分集大纲</b></td><td>每集钩子 / 反转 / 结尾扣；3 集一循环；全剧长线节点</td><td>第 3 集结尾和第 1 集开头比，世界确实有变化</td></tr>
+          <tr><td><b>④ 单集剧本</b></td><td>六拍拆到镜头级台词与画面</td><td>过一遍「信息点检查表」，再进分镜</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <CodeBox>
+<pre><code>logline 模板：
+〔身份〕在〔处境〕中，为〔目标〕必须〔行动〕，否则〔代价〕；背后还藏着〔长线悬念〕。
+
+示例：被豪门当棋子养了六年的养女，在自己婚礼上开直播掀桌；她要的不是退婚，是六年前父母车祸的真相。</code></pre>
+    </CodeBox>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">要点</span>
+      人物先于情节：主角想要什么、怕失去什么立不住，后面的钩子和反转都撑不住。
     </div>
 
     <h2 id="layers">三层结构：全剧、单元、单集</h2>
@@ -68,6 +94,26 @@ export default function Page() {
     <p>输入你这一集的时长，直接得到可用的时间码表。写分镜时按这个切，比凭感觉靠谱。</p>
     <BeatPlanner />
     <p style={{ marginTop: "16px", color: "var(--dim)", fontSize: "13px" }}>金色条 = 必须留钩子的位置。结尾扣的时长可以压缩到 2 秒，但绝不能没有。</p>
+
+    <h2 id="genre">题材赛道定位</h2>
+    <p>先选赛道再写本子。把核心爽点和主角配置对齐，再判断你的题材能不能套进去。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>赛道</th><th>核心爽点</th><th>主角配置</th></tr></thead>
+        <tbody>
+          <tr><td><b>复仇逆袭</b></td><td>受辱后翻盘、当众打脸</td><td>被压到谷底，握有底牌或证据</td></tr>
+          <tr><td><b>马甲身份</b></td><td>隐藏高手 / 富豪 / 大佬揭晓</td><td>表面弱势，关键时刻亮身份</td></tr>
+          <tr><td><b>赘婿 / 萌宝</b></td><td>家庭关系反转</td><td>萌宝助攻，或身份牵绊</td></tr>
+          <tr><td><b>神医 / 战神</b></td><td>专业碾压</td><td>被轻视的强者出手救人、镇场</td></tr>
+          <tr><td><b>穿越 / 重生</b></td><td>信息差预知</td><td>带记忆重来，借机改命</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><strong>先看有没有已验证需求</strong>：拆 2–3 部同赛道爆款，标注钩子、反转、情绪值，再决定是否进场。</li>
+      <li><strong>爽点密度优先于题材新颖</strong>：不硬写自己不熟的赛道。</li>
+      <li><strong>元素别堆太多</strong>：一部剧主打一个主赛道，再加一个叠加元素（如复仇 + 马甲 + 直播），元素过多主线会散。</li>
+    </ul>
 
     <h2 id="first3">前三集法则</h2>
     <p>平台给每部剧的流量窗口非常短。前三集决定它能不能进入推荐池，所以这三集的任务是固定的：</p>

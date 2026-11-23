@@ -13,6 +13,7 @@ export default function Page() {
   <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
     <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
     <a href="#problem" className="block py-1.5 text-muted transition hover:text-mist ">一致性为什么难</a>
+    <a href="#style" className="block py-1.5 text-muted transition hover:text-mist ">画风档位选择</a>
     <a href="#three" className="block py-1.5 text-muted transition hover:text-mist ">三层锁定法</a>
     <a href="#anchor" className="block py-1.5 text-muted transition hover:text-mist ">锚点设计</a>
     <a href="#turnaround" className="block py-1.5 text-muted transition hover:text-mist ">三视图规范</a>
@@ -31,6 +32,22 @@ export default function Page() {
     <h2 id="problem">一致性为什么难</h2>
     <p>生成模型没有「记忆」。它每次都在根据文字重新想象一张脸。你写「24 岁冷白皮黑长直」，它每次给你的「冷白皮」都不是同一个色号，「黑长直」的发缝位置也不一样。</p>
     <p>所以一致性不能靠描述，要靠<strong>约束</strong>：同一段固定文本 + 同一张参考图 + 同一个种子。三者缺一，就会漂移。</p>
+
+    <h2 id="style">画风档位选择</h2>
+    <p>画风是第一印象，也是一致性难度的源头。先按题材和受众选档，定下来就写进统一风格前缀，全剧不换。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>画风</th><th>特点</th><th>一致性难度</th><th>适合题材</th></tr></thead>
+        <tbody>
+          <tr><td><b>半写实 / 写实</b></td><td>贴近真人、皮肤质感强</td><td className="num">高（人脸易漂）</td><td>都市复仇、情感</td></tr>
+          <tr><td><b>国漫 / 二次元</b></td><td>线条概括、五官容错高</td><td className="num">低–中</td><td>古装、玄幻、爽剧</td></tr>
+          <tr><td><b>条漫 / 漫画风</b></td><td>网点、表情夸张</td><td className="num">低</td><td>快节奏、低成本试水</td></tr>
+          <tr><td><b>赛博 / 潮流</b></td><td>强设计感、符号化</td><td className="num">中</td><td>年轻向、科幻</td></tr>
+          <tr><td><b>古风 / 水墨</b></td><td>服饰场景规范重</td><td className="num">中</td><td>古装、武侠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>拿不准时，先用 <strong>3 个测试镜头</strong>对比不同画风的一致性和单镜成本，再定档（方法见工具页「三镜测试法」）。选档时把「脸能不能稳住」放在「好不好看」前面。</p>
 
     <h2 id="three">三层锁定法</h2>
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ margin: "18px 0 26px" }}>
