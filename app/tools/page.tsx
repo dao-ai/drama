@@ -36,6 +36,7 @@ export default function ToolsPage() {
         <a href="#image" className="block py-1.5 text-muted transition hover:text-mist ">图像 / 关键帧</a>
         <a href="#video" className="block py-1.5 text-muted transition hover:text-mist ">视频 / 动效</a>
         <a href="#voice" className="block py-1.5 text-muted transition hover:text-mist ">语音 / 配音</a>
+        <a href="#dub" className="block py-1.5 text-muted transition hover:text-mist ">口型与配音实操</a>
         <a href="#combo" className="block py-1.5 text-muted transition hover:text-mist ">三档组合</a>
         <a href="#test" className="block py-1.5 text-muted transition hover:text-mist ">三镜测试法</a>
         <a href="#buy" className="block py-1.5 text-muted transition hover:text-mist ">采购检查表</a>
@@ -282,6 +283,28 @@ export default function ToolsPage() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <h2 id="dub">口型对齐与配音实操</h2>
+        <p>漫剧多数镜头是关键帧 + 局部动效，<strong>不追求逐帧对口型</strong>，目标是「可接受、不出戏」。</p>
+        <h3>口型三招</h3>
+        <ul>
+          <li><strong>避开口部特写</strong>：台词镜头用侧脸、背身、反应镜头、中景；正脸说话镜头压到最少。</li>
+          <li><strong>局部口型 / 表情切换</strong>：必须正脸说话时，用轻微嘴部动效或切换 2–3 张表情帧，替代逐帧口型。</li>
+          <li><strong>说完就切走</strong>：关键句落地后立刻切反应镜头或空镜，不给观众盯嘴型的时间。</li>
+        </ul>
+        <p>真要做口型同步视频，只给 A 级高光镜头，不要全集生成。</p>
+        <h3>配音落地要点</h3>
+        <ul>
+          <li><strong>角色音色表</strong>：一人一档，记录音色、语速、情绪档、参考样本；同角色跨集复用同一音色。</li>
+          <li><strong>分段合成</strong>：按镜号把台词一句一段，方便对齐和单独重录，不要整集一口气读。</li>
+          <li><strong>情绪标注</strong>：台词前标情绪 / 重音 / 停顿，如 <code>〔压低，冷笑〕「你以为我会信？」</code>；TTS 情绪标签按工具支持填写。</li>
+          <li><strong>对齐顺序</strong>：先铺配音轨，按台词切画面节奏；BGM 和音效最后叠加，别让音乐牵着配音走。</li>
+          <li><strong>稳定性</strong>：长文本分批合成，每批复读角色描述；换音色或模型后先出样片对比，避免跨集声音漂移。</li>
+        </ul>
+        <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">要点</span>
+          声音一致性和画面一致性同等重要——同角色跨集换声，观众出戏的速度往往比换脸还快。
         </div>
 
         <h2 id="combo">三档组合</h2>

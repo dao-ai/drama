@@ -62,6 +62,7 @@ export default function Page() {
         </tbody>
       </table>
     </div>
+    <p style={{ marginTop: "16px", color: "var(--dim)", fontSize: "13px" }}>表内占比是起点区间，不是硬性公式：按题材和单集时长微调，再用自己样片的完播率、掉点位置反向修正。</p>
 
     <h2 id="beatcalc">节拍时间码生成器</h2>
     <p>输入你这一集的时长，直接得到可用的时间码表。写分镜时按这个切，比凭感觉靠谱。</p>

@@ -48,7 +48,7 @@ export default function Page() {
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="inline-block rounded-full border border-flame/35 bg-flame/10 px-2.5 py-[2px] text-[11px] text-[#ff8a80]">A 级</span></div>
         <h3>必须视频</h3>
-        <p>情绪转折、关键动作、群像场面。3–6 秒，全剧不超过总镜数的 30%。</p>
+        <p>情绪转折、关键动作、群像场面。3–6 秒，一般控制在总镜数 30% 以内（按预算和样片调整）。</p>
       </div>
       <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]">
         <div><span className="inline-block rounded-full border border-gold/35 bg-gold/10 px-2.5 py-[2px] text-[11px] text-gold">B 级</span></div>
@@ -125,7 +125,7 @@ export default function Page() {
         </tbody>
       </table>
     </div>
-    <p>返工率按 <strong>20–40%</strong> 预留。如果连续几集返工率低于 10%，多半不是技术变好了，是你在放低验收标准。</p>
+    <p>返工率按 <strong>20–40%</strong> 预留，这是起点区间，用自己项目的实际返工记录逐步收紧。如果连续几集返工率低于 10%，多半不是技术变好了，是你在放低验收标准。</p>
 
     <h2 id="calc">单集成本计算器</h2>
     <p>把供应商报价填进去，得到单集与全剧成本。默认值是占位示例，<strong>拿到真实报价后必须替换</strong>。</p>
