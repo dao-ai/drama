@@ -21,6 +21,7 @@ export default function Page() {
     <a href="#scene" className="block py-1.5 text-muted transition hover:text-mist ">场景底板</a>
     <a href="#negative" className="block py-1.5 text-muted transition hover:text-mist ">负向提示词</a>
     <a href="#fail" className="block py-1.5 text-muted transition hover:text-mist ">六种典型翻车</a>
+    <a href="#assets" className="block py-1.5 text-muted transition hover:text-mist ">资产归档与多集一致性</a>
   </aside>
 
   <div className="doc-main">
@@ -136,6 +137,28 @@ export default function Page() {
           <tr><td>服装每集变</td><td>描述里省略了服装细节</td><td>服装写进角色卡，逐条复制</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <h2 id="assets">资产归档与多集一致性</h2>
+    <p>单集靠运气能稳住，60–100 集靠资产。锁定下来的角色、场景、提示词要归档成可复用的资产，后面每一集都从资产出发，而不是重新抽卡。</p>
+    <h3>目录约定</h3>
+    <ul>
+      <li><strong>角色卡</strong>：外貌描述、锚点、正负向提示词、seed、选定参考图，按角色一人一档。</li>
+      <li><strong>场景底板</strong>：空镜底图 + 满座 / 死寂 / 夜晚等变体，按场景归档。</li>
+      <li><strong>生成记录</strong>：关键帧、视频片段、音频按镜号命名归档（S01E001_场景_版本），记录模型 / seed / 耗时 / 费用。</li>
+      <li><strong>提示词库</strong>：按角色 / 场景归档已验证的提示词，复用为主，不每次重写。</li>
+    </ul>
+    <h3>多集一致性维护</h3>
+    <ul>
+      <li>每集开拍前回看角色卡核对锚点，不靠记忆。</li>
+      <li>场景复用底板 + 局部换光，不整幅重画。</li>
+      <li>新版本另存版本号，不覆盖已锁定的参考图；参考图锁定后不随意更换。</li>
+      <li>跨集同框先对角色卡，明确人数与站位，避免克隆人。</li>
+      <li>每集成片后比对脸、发型、服装、锚点是否与角色卡一致，漂移镜头进返工队列。</li>
+    </ul>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">要点</span>
+      资产是量产的地基：角色卡和底板一次做对，后面几十集都在省时间；资产乱了，集数越多返工越贵。
     </div>
   </div>
 </div>

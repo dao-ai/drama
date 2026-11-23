@@ -12,6 +12,7 @@ export default function Page() {
   <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
     <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
     <a href="#progress" className="block py-1.5 text-muted transition hover:text-mist ">完成进度</a>
+    <a href="#g-sample" className="block py-1.5 text-muted transition hover:text-mist ">样片验证</a>
     <a href="#g-script" className="block py-1.5 text-muted transition hover:text-mist ">剧本</a>
     <a href="#g-visual" className="block py-1.5 text-muted transition hover:text-mist ">视觉开发</a>
     <a href="#g-shot" className="block py-1.5 text-muted transition hover:text-mist ">分镜与生成</a>

@@ -6,6 +6,20 @@ type Group = { key: string; title: string; icon: string; items: string[] };
 
 const GROUPS: Group[] = [
   {
+    key: "sample",
+    title: "样片验证（D1–D7）",
+    icon: "🧪",
+    items: [
+      "D1 一页纸企划已定：平台、对标 3 部、logline、受众、预算上限写清",
+      "D2 人物小传 + 前三集大纲 + E1 镜头级剧本完成，可直接拆分镜",
+      "D3 风格测试 3 镜通过，统一风格前缀写死，不再逐集即兴改画风",
+      "D4 主演三视图与锚点确认，参考图与 seed 已锁定进角色卡",
+      "D5 关键帧完成 ≥80%，每张记录模型 / 参数 / 耗时 / 费用",
+      "D6 仅 A 级镜头生视频，配音、音效与 2D 动效粗剪成型",
+      "D7 精剪、字幕、封面导出，成本表与改进清单已复盘",
+    ],
+  },
+  {
     key: "script",
     title: "剧本",
     icon: "✍️",

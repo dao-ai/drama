@@ -191,6 +191,7 @@ export default function Page() {
         </div>
         <div className="rv mt-4 flex flex-wrap gap-3">
           <Link className="inline-flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-br from-[#e8544f] to-[#c3332f] px-[22px] py-3 text-[15px] font-semibold text-white shadow-[0_10px_26px_rgba(224,67,63,0.28)] transition hover:-translate-y-px hover:shadow-[0_14px_32px_rgba(224,67,63,0.36)]" href="/storyboard#calc">算一下你的单集成本 →</Link>
+          <Link className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]" href="/checklist#g-sample">样片每日打卡 →</Link>
           <Link className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-[22px] py-3 text-[15px] font-semibold text-mist transition hover:bg-white/[0.07]" href="/checklist">打开上线检查表</Link>
         </div>
       </section>

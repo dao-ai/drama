@@ -13,6 +13,7 @@ export default function Page() {
   <aside className="sticky top-[88px] hidden text-[13.5px] lg:block" data-toc>
     <div className="mb-3 text-[11px] uppercase tracking-[0.16em] text-dim">本页目录</div>
     <a href="#handoff" className="block py-1.5 text-muted transition hover:text-mist ">阶段交接物</a>
+    <a href="#market" className="block py-1.5 text-muted transition hover:text-mist ">平台与形态</a>
     <a href="#s0" className="block py-1.5 text-muted transition hover:text-mist ">S0 立项</a>
     <a href="#s1" className="block py-1.5 text-muted transition hover:text-mist ">S1 剧本</a>
     <a href="#s2" className="block py-1.5 text-muted transition hover:text-mist ">S2 视觉开发</a>
@@ -44,6 +45,35 @@ export default function Page() {
           <tr><td>S7 复盘</td><td>改进项（具体到集与镜）</td><td>下一批 S1 的输入</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <h2 id="market">平台与形态：先选对赛道，再谈怎么做</h2>
+    <p>立项最容易错的不是技术，而是形态和平台没定下来就开机。形态决定成本结构，平台决定节奏和回收方式，两者都要在 S0 写进一页纸企划。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>形态</th><th>制作方式</th><th>成本量级</th><th>一致性难度</th><th>适合</th></tr></thead>
+        <tbody>
+          <tr><td><b>真人短剧</b></td><td>实拍，演员 + 场地 + 后期</td><td className="num">高</td><td>不涉及生成一致性</td><td>有拍摄资源与演员渠道</td></tr>
+          <tr><td><b>动态漫 / 条漫</b></td><td>现成漫画静态帧 + 推拉、视差动效</td><td className="num">低–中</td><td>低</td><td>低成本快速试水</td></tr>
+          <tr><td><b>AI 漫剧（本站）</b></td><td>AI 关键帧 + 2D 动效 + 少量图生视频</td><td className="num">中</td><td>中–高（脸 / 服装易漂移）</td><td>个人 / 小团队量产</td></tr>
+          <tr><td><b>互动短剧</b></td><td>分支剧情 + 多结局 + 交互选择</td><td className="num">高</td><td>工程量在内容分支</td><td>有产品化与交互能力</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>平台</th><th>内容偏好</th><th>回收方式</th></tr></thead>
+        <tbody>
+          <tr><td><b>红果 / 番茄等免费短剧</b></td><td>强钩子、快节奏、长篇连载</td><td>广告分账 + 投流放量</td></tr>
+          <tr><td><b>抖音 / 快手</b></td><td>单条爆量，前 3 秒定生死</td><td>引流到站外小程序 / 付费转化</td></tr>
+          <tr><td><b>ReelShort / DramaBox 等出海</b></td><td>强情绪、竖屏、集中付费卡点</td><td>付费解锁 + 订阅</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>回收靠哪一种（广告分账、投流、付费卡点），直接决定单集节奏、卡点位置和集数规模。<strong>投流是单独的一笔预算，别混进制作成本里自我安慰</strong>。</p>
+    <div className="my-5 rounded-xl border border-flame/30 bg-flame/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#f0cfcd] [&_b]:text-[#ff8a80]">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">立项关卡</span>
+      先回答三个问题：发哪个平台？观众为什么划到第 3 秒还不划走？回收靠什么？有一个答不上来，先别进入剧本阶段。
     </div>
 
     <h2 id="stages">阶段详解</h2>

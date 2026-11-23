@@ -39,6 +39,7 @@ export default function ToolsPage() {
         <a href="#combo" className="block py-1.5 text-muted transition hover:text-mist ">三档组合</a>
         <a href="#test" className="block py-1.5 text-muted transition hover:text-mist ">三镜测试法</a>
         <a href="#buy" className="block py-1.5 text-muted transition hover:text-mist ">采购检查表</a>
+        <a href="#legal" className="block py-1.5 text-muted transition hover:text-mist ">合规与版权红线</a>
         <a href="#trap" className="block py-1.5 text-muted transition hover:text-mist ">四个选型陷阱</a>
       </aside>
 
@@ -359,6 +360,21 @@ export default function ToolsPage() {
               <tr><td>版本稳定性</td><td>模型升级会不会改变画风，能否锁定旧版本</td></tr>
             </tbody>
           </table>
+        </div>
+
+        <h2 id="legal">合规与版权红线</h2>
+        <p>量产上线前必须过一遍版权与合规。工具能生成画面，不代表生成出来就能商用。</p>
+        <ul>
+          <li><strong>角色形象</strong>：参考图、LoRA 训练素材要有授权；不用明星脸、他人 IP 形象或来路不明的素材。</li>
+          <li><strong>声音克隆</strong>：克隆音色需取得本人或授权方同意并保留凭证；商用 TTS 先看清平台商用条款。</li>
+          <li><strong>音乐与音效</strong>：BGM、音效用可商用曲库或购买授权并留记录，不直接扒片中现成音乐。</li>
+          <li><strong>字体 / 贴图 / 道具</strong>：封面字体、贴图、界面截图道具确认可商用。</li>
+          <li><strong>平台审核</strong>：避开违规题材与低俗表达，标题封面不误导；AI 生成内容按平台规则标注。</li>
+          <li><strong>凭证归档</strong>：商用授权、发票、素材来源集中留档，上线前逐项核对。</li>
+        </ul>
+        <div className="my-5 rounded-xl border border-flame/30 bg-flame/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#f0cfcd] [&_b]:text-[#ff8a80]">
+          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">风险提示</span>
+          拿不准的素材先替换，别赌审核；上线前把授权凭证和平台规则过一遍。这里是通用清单，不构成法律意见，重大项目建议再做专门的版权核对。
         </div>
 
         <h2 id="trap">四个选型陷阱</h2>
