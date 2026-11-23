@@ -14,6 +14,7 @@ export const NAV_PRIMARY: NavItem[] = [
 export const NAV_SECONDARY: NavItem[] = [
   { href: "/tools", label: "工具选型" },
   { href: "/resources", label: "学习资源" },
+  { href: "/glossary", label: "术语表" },
   { href: "/projects", label: "报价库" },
 ];
 
