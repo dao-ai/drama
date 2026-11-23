@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV_PRIMARY, type NavItem } from "@/lib/nav";
+import { NAV_PRIMARY, isNavActive, type NavItem } from "@/lib/nav";
 
 const items: NavItem[] = NAV_PRIMARY;
 
@@ -29,7 +29,7 @@ export default function SiteNav() {
               href={it.href}
               className={
                 "whitespace-nowrap rounded-full px-2.5 py-1.5 text-[12.5px] transition sm:px-3.5 sm:text-sm " +
-                (pathname === it.href
+                (isNavActive(pathname, it.href)
                   ? "bg-flame/15 text-white shadow-[inset_0_0_0_1px_rgba(224,67,63,0.35)]"
                   : "text-muted hover:bg-white/5 hover:text-mist")
               }

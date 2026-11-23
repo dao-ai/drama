@@ -16,3 +16,10 @@ export const NAV_SECONDARY: NavItem[] = [
   { href: "/resources", label: "学习资源" },
   { href: "/projects", label: "报价库" },
 ];
+
+/** 归一化路径后判断是否当前页（兼容有无尾斜杠） */
+export function isNavActive(pathname: string | null, href: string): boolean {
+  if (!pathname) return false;
+  const norm = (p: string) => p.replace(/\/+$/, "") || "/";
+  return norm(pathname) === norm(href);
+}
