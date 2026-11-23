@@ -104,6 +104,37 @@ const OVERSEAS: Item[] = [
   },
 ];
 
+const GITHUB: Item[] = [
+  {
+    title: "Awesome Short Drama Skills",
+    href: "https://github.com/UnderleveledBuilder/awesome-short-drama-skills",
+    tags: ["GitHub", "Awesome", "技能包"],
+    note: "漫剧/短剧方向最对口的清单：小说改编、分集大纲、钩子卡点、分镜、角色资产，以及 Seedance / 可灵 / MiniMax 提示词，按创作阶段和适配模型分组。",
+    best: "找能装进智能体的短剧 skill",
+  },
+  {
+    title: "Awesome Seedance 2 Prompts",
+    href: "https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts",
+    tags: ["GitHub", "Awesome", "提示词"],
+    note: "2000+ 条 Seedance 2.0 / 2.5 视频提示词，覆盖电影感、动漫、UGC、广告等风格，附角色一致性技巧与进阶工作流。",
+    best: "写出片环节的视频提示词",
+  },
+  {
+    title: "Awesome Video Generation",
+    href: "https://github.com/vertalm/awesome-video-generation",
+    tags: ["GitHub", "Awesome", "模型"],
+    note: "开源视频生成模型汇总：Open-Sora、Wan、HunyuanVideo、LTX、Step-Video、LongCat 等，附规格与部署入口。",
+    best: "对比和挑选开源视频模型",
+  },
+  {
+    title: "Awesome Open AI Sora",
+    href: "https://github.com/Curated-Awesome-Lists/Awesome-Open-AI-Sora",
+    tags: ["GitHub", "Awesome", "资讯"],
+    note: "Sora 生态的文章、视频与工具聚合，偏动态跟踪；参考价值一般，作为补充。",
+    best: "跟 Sora 生态的最新动态",
+  },
+];
+
 function Group({ title, kicker, items }: { title: string; kicker: string; items: Item[] }) {
   return (
     <section style={{ padding: "0 0 8px" }}>
@@ -145,6 +176,7 @@ export default function ResourcesPage() {
         <a href="#cn-video" className="block py-1.5 text-muted transition hover:text-mist ">中文 · 视频</a>
         <a href="#official" className="block py-1.5 text-muted transition hover:text-mist ">官方工具</a>
         <a href="#overseas" className="block py-1.5 text-muted transition hover:text-mist ">海外课程与社区</a>
+        <a href="#github" className="block py-1.5 text-muted transition hover:text-mist ">GitHub 清单</a>
         <a href="#filter" className="block py-1.5 text-muted transition hover:text-mist ">四条筛选手册</a>
         <a href="#gap" className="block py-1.5 text-muted transition hover:text-mist ">还缺什么</a>
       </aside>
@@ -181,6 +213,12 @@ export default function ResourcesPage() {
 
         <h2 id="overseas">海外课程与社区</h2>
         <Group title="体系和资源更深" kicker="English" items={OVERSEAS} />
+
+        <h2 id="github">GitHub 清单</h2>
+        <Group title="社区整理的 Awesome 列表" kicker="GitHub · Awesome" items={GITHUB} />
+        <p style={{ color: "var(--dim)", fontSize: 13 }}>
+          清单收录的是第三方项目，质量和可用性需自行点开甄别；星数、更新时间都会变化，以仓库页面为准。
+        </p>
 
         <h2 id="filter">四条筛选手册</h2>
         <div className="grid gap-4 sm:grid-cols-2">
