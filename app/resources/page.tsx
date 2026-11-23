@@ -133,6 +133,41 @@ const GITHUB: Item[] = [
     note: "Sora 生态的文章、视频与工具聚合，偏动态跟踪；参考价值一般，作为补充。",
     best: "跟 Sora 生态的最新动态",
   },
+  {
+    title: "Awesome Story Skills",
+    href: "https://github.com/UnderleveledBuilder/awesome-story-skills",
+    tags: ["GitHub", "Awesome", "故事方法"],
+    note: "故事与剧本方向的技能清单：人物动机、结构、冲突与场景写法，和短剧剧本方法互补。",
+    best: "补故事与人物基本功",
+  },
+  {
+    title: "Awesome Novel Skills",
+    href: "https://github.com/UnderleveledBuilder/awesome-novel-skills",
+    tags: ["GitHub", "Awesome", "原著改编"],
+    note: "网文与原著改编方向：拆解卖点、章节取舍、人物关系迁移，适合做小说改漫剧前的参考。",
+    best: "从网文改编剧本",
+  },
+  {
+    title: "Awesome Social Media Skills",
+    href: "https://github.com/UnderleveledBuilder/awesome-social-media-skills",
+    tags: ["GitHub", "Awesome", "分发运营"],
+    note: "自媒体分发方向：抖音、小红书、视频号的文案、封面与发布技巧，对应成片之后的上线环节。",
+    best: "补发布与平台运营",
+  },
+  {
+    title: "Awesome AI Short Drama",
+    href: "https://github.com/PAMPAS-Lab/awesome-ai-short-drama",
+    tags: ["GitHub", "Awesome", "英文"],
+    note: "英文 AI 短剧资源聚合，偏开源系统、论文与商业产品，适合了解海外生态和工具全景。",
+    best: "看海外 AI 短剧生态",
+  },
+  {
+    title: "Awesome AI Video",
+    href: "https://github.com/zhaotoday/awesome-ai-video",
+    tags: ["GitHub", "Awesome", "视频生产"],
+    note: "AI 视频生产全景：平台、剪辑、ComfyUI 工作流与分发工具，覆盖从生成到成片的完整链路。",
+    best: "梳理 AI 视频工具链",
+  },
 ];
 
 function Group({ title, kicker, items }: { title: string; kicker: string; items: Item[] }) {

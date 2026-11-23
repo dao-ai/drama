@@ -23,6 +23,7 @@ export default function Page() {
     <a href="#negative" className="block py-1.5 text-muted transition hover:text-mist ">负向提示词</a>
     <a href="#fail" className="block py-1.5 text-muted transition hover:text-mist ">六种典型翻车</a>
     <a href="#assets" className="block py-1.5 text-muted transition hover:text-mist ">资产归档与多集一致性</a>
+    <a href="#ledger" className="block py-1.5 text-muted transition hover:text-mist ">连载剧情台账</a>
   </aside>
 
   <div className="doc-main">
@@ -177,6 +178,24 @@ export default function Page() {
       <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">要点</span>
       资产是量产的地基：角色卡和底板一次做对，后面几十集都在省时间；资产乱了，集数越多返工越贵。
     </div>
+
+    <h2 id="ledger">连载剧情台账</h2>
+    <p>视觉资产管「脸和场景」，剧情台账管「谁知道什么、人物走到哪一步、伏笔什么时候收」。集数一多，不靠台账就会出现人设漂移、前后矛盾和伏笔烂尾。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>台账条目</th><th>记录内容</th><th>防的问题</th></tr></thead>
+        <tbody>
+          <tr><td><b>人物状态</b></td><td>每集结束时各主要角色的处境、关系、握有的底牌 / 证据 / 伤势</td><td>人设漂移、关系忽好忽坏、底牌凭空消失</td></tr>
+          <tr><td><b>信息差</b></td><td>观众知道什么、每个角色知道什么；哪一集揭露了哪条信息</td><td>角色该知道的不知道、不该知道的先知道</td></tr>
+          <tr><td><b>伏笔登记</b></td><td>埋下的钩子、物件、身世线索，标注计划第几集回收；未回收的保持状态</td><td>伏笔烂尾、前面提过后面忘</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>每集剧本定稿后更新台账，而不是拍完再补。</li>
+      <li>写下一集前先查台账：人物当下处境和已揭露信息对齐了，再动笔。</li>
+      <li>一条伏笔超过计划回收集数还没落地，要么补进排期，要么明确砍掉，别一直挂着。</li>
+    </ul>
   </div>
 </div>
   );

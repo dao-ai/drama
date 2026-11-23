@@ -19,9 +19,11 @@ export default function Page() {
     <a href="#beatcalc" className="block py-1.5 text-muted transition hover:text-mist ">节拍时间码生成器</a>
     <a href="#beattable" className="block py-1.5 text-muted transition hover:text-mist ">节拍表模板</a>
     <a href="#genre" className="block py-1.5 text-muted transition hover:text-mist ">题材赛道定位</a>
+    <a href="#evaluate" className="block py-1.5 text-muted transition hover:text-mist ">改编前先评估</a>
     <a href="#first3" className="block py-1.5 text-muted transition hover:text-mist ">前三集法则</a>
     <a href="#hooks" className="block py-1.5 text-muted transition hover:text-mist ">钩子类型清单</a>
     <a href="#dialogue" className="block py-1.5 text-muted transition hover:text-mist ">台词四条规则</a>
+    <a href="#deai" className="block py-1.5 text-muted transition hover:text-mist ">去 AI 味</a>
     <a href="#check" className="block py-1.5 text-muted transition hover:text-mist ">信息点检查表</a>
     <a href="#traps" className="block py-1.5 text-muted transition hover:text-mist ">四种废稿模式</a>
   </aside>
@@ -138,6 +140,20 @@ export default function Page() {
       <li><strong>元素别堆太多</strong>：一部剧主打一个主赛道，再加一个叠加元素（如复仇 + 马甲 + 直播），元素过多主线会散。</li>
     </ul>
 
+    <h2 id="evaluate">改编前先评估</h2>
+    <p>手上有一本小说或一个故事，别急着拆剧本。先判断它适不适合改成竖屏漫剧，四个问题过不过关，决定后面要不要投入。</p>
+    <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
+      <table>
+        <thead><tr><th>评估问题</th><th>过关标准</th><th>不过关怎么办</th></tr></thead>
+        <tbody>
+          <tr><td><b>卖点能不能可视化</b></td><td>核心冲突有拍得出来的画面：物件、场合、动作，而不只是心理活动</td><td>纯内心博弈要先改成外部事件，否则漫剧没法呈现</td></tr>
+          <tr><td><b>冲突能不能落到动作</b></td><td>能拆成正反打、对峙、打脸、证据交锋等可演的场面</td><td>靠大段说明和回忆推动的戏，先重排成场面</td></tr>
+          <tr><td><b>有没有连载空间</b></td><td>主线能撑 60–100 集，每 3 集一个回合，悬念可以分批解锁</td><td>一次性收尾的故事适合做单集样片，不强行拉长</td></tr>
+          <tr><td><b>人设立不立得住</b></td><td>主角的目标、软肋、底牌清楚，主要配角各有动机和来路</td><td>人物先补小传，再谈改编</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <h2 id="first3">前三集法则</h2>
     <p>平台给每部剧的流量窗口非常短。前三集决定它能不能进入推荐池，所以这三集的任务是固定的：</p>
     <div className="my-[18px] mb-6 overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_table]:min-w-[560px] [&_table]:border-collapse [&_table]:text-[13.5px] [&_th]:whitespace-nowrap [&_th]:border-b [&_th]:border-line [&_th]:bg-white/[0.04] [&_th]:px-3.5 [&_th]:py-[11px] [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:tracking-[0.06em] [&_th]:text-muted [&_td]:border-b [&_td]:border-line [&_td]:px-3.5 [&_td]:py-[11px] [&_td]:text-left [&_td]:align-top [&_tbody_tr:hover]:bg-white/[0.02] [&_tr:last-child_td]:border-0 [&_td.num]:whitespace-nowrap [&_td.num]:tabular-nums">
@@ -182,6 +198,19 @@ export default function Page() {
 ❌ 过长：你以为你今天站在这里说这些话就能改变什么吗？
 ✅ 拆句：你以为站在这儿说两句，就能翻盘？</code></pre>
 </CodeBox>
+
+    <h2 id="deai">去 AI 味</h2>
+    <p>AI 写的对白常有统一的「机器腔」。交稿前专门排查下面四种，把情绪从形容词挪回动作和物件上。</p>
+    <div className="grid gap-4 sm:grid-cols-2" style={{ margin: "16px 0 24px" }}>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>① 套话排比</h3><p>「不仅……更是……」「一边……一边……」三连堆砌。删掉排比，只留最狠的一句。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>② 形容词喊情绪</h3><p>「无比愤怒、心如刀绞」。改成动作和物件：攥皱的请柬、发抖的手、摔门的力度。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>③ 心理旁白代替动作</h3><p>把心里话全念出来。用表情、停顿、一个动作让观众自己读；旁白只留给时间跳跃和内心反差。</p></div>
+      <div className="relative rounded-2xl border border-line bg-gradient-to-br from-panel to-[#101017] p-[22px] transition duration-200 hover:-translate-y-0.5 hover:border-white/15 [&_h3]:mb-2 [&_h3]:mt-2.5 [&_h3]:text-[17px] [&_h3]:font-bold [&_p]:m-0 [&_p]:text-sm [&_p]:leading-[1.7] [&_p]:text-muted [&_.ico]:text-[22px]"><h3>④ 千人一口</h3><p>所有角色一个腔调。按身份定口气：用词、节奏、避讳，长辈、反派、配角各有各的说话方式。</p></div>
+    </div>
+    <div className="my-5 rounded-xl border border-gold/30 bg-gold/10 px-[18px] py-4 text-[14.5px] leading-[1.75] text-[#e8dcc4] [&_b]:text-gold">
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">自检</span>
+      盖住画面默读对白：听着像两个具体的人在交锋，而不是 AI 在交稿，才算过。
+    </div>
 
     <h2 id="check">信息点检查表</h2>
     <p>每集写完，用这张表过一遍。任何一项打不了勾，都别进分镜。</p>

@@ -41,6 +41,7 @@ export default function ToolsPage() {
         <a href="#test" className="block py-1.5 text-muted transition hover:text-mist ">三镜测试法</a>
         <a href="#buy" className="block py-1.5 text-muted transition hover:text-mist ">采购检查表</a>
         <a href="#legal" className="block py-1.5 text-muted transition hover:text-mist ">合规与版权红线</a>
+        <a href="#skills" className="block py-1.5 text-muted transition hover:text-mist ">第三方资源甄别</a>
         <a href="#trap" className="block py-1.5 text-muted transition hover:text-mist ">四个选型陷阱</a>
       </aside>
 
@@ -399,6 +400,16 @@ export default function ToolsPage() {
           <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] opacity-80">风险提示</span>
           拿不准的素材先替换，别赌审核；上线前把授权凭证和平台规则过一遍。这里是通用清单，不构成法律意见，重大项目建议再做专门的版权核对。
         </div>
+
+        <h2 id="skills">第三方资源甄别</h2>
+        <p>社区里有不少现成的 skill、提示词包和工作流模板，能省起步时间，但来路不明的包会带安全和版权风险。装进自己的生产线之前，先按下面几点甄别。</p>
+        <ul>
+          <li><strong>先读说明文件</strong>：看 README、使用范围、更新时间和作者维护状态；只看打包成品、不看说明最容易踩坑。</li>
+          <li><strong>警惕夹带脚本</strong>：纯提示词包应是文本或配置，不该要求运行脚本、exe 或全局安装命令；必须执行代码的，先逐条看脚本内容再跑。</li>
+          <li><strong>核对许可证</strong>：确认是否允许商用、允许改编和二次分发；禁止商用或禁演绎的，不能用于上线项目。</li>
+          <li><strong>数据回传</strong>：弄清参考图、剧本会不会被上传到外部服务；能本地跑的优先本地，敏感项目不传外网。</li>
+          <li><strong>先隔离测试</strong>：在样片流程里跑一遍，核对产出质量和版权口径，确认没问题再进正式产线。</li>
+        </ul>
 
         <h2 id="trap">四个选型陷阱</h2>
         <div className="grid gap-4 sm:grid-cols-2">
